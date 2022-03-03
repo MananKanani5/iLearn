@@ -1,0 +1,25 @@
+:root {
+  --Primary: #f36730;
+  --Secondary: #0a233d;
+
+  --hover-primary: #dd5e2c;
+  --hover-secondary: #071f3a;
+}
+@media (max-width: 786px) {
+  .profile {
+    padding: 11px;
+  }
+  .logo{
+    margin-left: 15px;
+  }
+  .name, .tel{
+    display: block;
+    
+  }
+}
+
+/* nav Username sub menu */
+.navigation:hover .navigation-content {
+  display: block;
+}
+

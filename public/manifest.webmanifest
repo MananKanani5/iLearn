@@ -1,0 +1,15 @@
+{
+  "background_color": "purple",
+  "description": "iLearn - Learners College",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "192x192",
+      "type": "image/ico"
+    }
+  ],
+  "name": "iLearn - Learners College",
+  "short_name": "iLearn",
+  "start_url": "index.html"
+}
