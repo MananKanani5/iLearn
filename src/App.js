@@ -2,7 +2,6 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Navbar from "./Components/Navbar"
 import Footer from './Components/Footer'
-import AttendancePie from "./Components/AttendancePie"
 import AdminCreate from './routes/AdminCreate'
 import Attendance from './routes/Attendance'
 import About from './routes/About'
@@ -18,8 +17,6 @@ function App() {
     <>
       <BrowserRouter>
       <Navbar />
-      
-      {/* <AttendancePie /> */}
         <Routes>
           <Route path='/'  element={<Home />} />
           <Route path='/About' element={<About />} />

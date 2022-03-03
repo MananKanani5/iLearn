@@ -7,7 +7,7 @@ const TeacherRole = () => {
     <>
       <NavLink
         style={({ isActive }) => ({
-          color: isActive ? '#f36730' : '#ffffff',
+          color: isActive ? '#f36730' : '',
         })}
         to="/Attendance"
         className=" hover:text-Primary-color transition ease-in-out duration-400 font-semibold">
