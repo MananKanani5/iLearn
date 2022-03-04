@@ -5,7 +5,8 @@ import Footer from './Components/Footer'
 import AdminCreate from './routes/AdminCreate'
 import Attendance from './routes/Attendance'
 import About from './routes/About'
-import Home from './routes/Home'
+// import Home from './routes/Home'
+const Home = React.lazy(() => import("./routes/Home"));
 import Assignment from './routes/Assignment'
 import Notice from "./routes/Notice";
 import Quiz from "./routes/Quiz";
