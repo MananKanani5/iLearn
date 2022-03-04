@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Navbar from "./Components/Navbar"
+// import Navbar from "./Components/Navbar"
+const Navbar = React.lazy(() => import("./routes/Navbar"));
 import Footer from './Components/Footer'
 import AdminCreate from './routes/AdminCreate'
 import Attendance from './routes/Attendance'
