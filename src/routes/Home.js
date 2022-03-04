@@ -14,8 +14,8 @@ class Home extends React.Component {
           </div>
 
           <div className="text pr-10 max-sm:pr-0 max-sm:flex max-sm:flex-wrap max-sm:justify-center">
-            <h3 className="tracking-widest uppercase text-[25px] max-sm:text-[20px] ">Welcome to kes's</h3>
-            <h1 className="text-[60px] font-bold uppercase mb-5 text-Secondary-color max-sm:text-[28px] ">Learners College</h1>
+            <h3 className="tracking-widest uppercase text-[25px] max-sm:text-[18px] ">Welcome to kes's</h3>
+            <h1 className="text-[60px] font-bold uppercase mb-5 text-Secondary-color max-sm:text-[30px] ">Learners College</h1>
             <p className="mb-12 text-center max-sm:mb-7">Learners College of Arts and Commerce is one of the best colleges in the Mumbai.</p> 
             <NavLink to={"."}
               className="bg-Primary-color hover:bg-hover-primary transition ease-in-out duration-400 px-7 py-4 h-auto w-auto rounded-full cursor-pointer hover:shadow-lg text-white font-semibold ">
