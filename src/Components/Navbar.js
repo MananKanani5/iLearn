@@ -23,7 +23,7 @@ const Navbar = (props) => {
   return (
     <>
       <div className="bg-Secondary-color text-white top-0 w-full sticky ">
-        <div className="flex justify-evenly pt-2 pb-2 items-center pl-5 pr-5 max-sm:pl-3 max-sm:pr-3">
+        <div className="flex justify-evenly  items-center py-2 px-5 max-sm:pl-3 max-sm:pr-3">
           <div className="hambuger block md:hidden">
             <button onClick={showMenu} className=" ml-2">
               <i className={` ${menu === 'hidden' ? 'block' : 'hidden'} fa fa-solid fa-bars text-2xl h-4 w-4`}></i>
