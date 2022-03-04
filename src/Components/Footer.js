@@ -12,7 +12,7 @@ function Footer() {
               </div>
               <div className="logo  flex items-center flex-wrap max-sm:justify-center ">
                 <span className='max-sm:mb-3'>Designed and Developed by </span>
-                <img src={iLearn_white} alt="" className='w-32 ml-4 max-sm:m-0' />
+                <img src={iLearn_white} alt="" className='w-32 ml-4 max-sm:m-2 ' />
               </div>
             </div>
         </div>
