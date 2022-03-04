@@ -1,13 +1,11 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-// import Navbar from "./Components/Navbar"
-const Navbar = React.lazy(() => import("./routes/Navbar"));
+import Navbar from "./Components/Navbar"
 import Footer from './Components/Footer'
 import AdminCreate from './routes/AdminCreate'
 import Attendance from './routes/Attendance'
 import About from './routes/About'
-// import Home from './routes/Home'
-const Home = React.lazy(() => import("./routes/Home"));
+import Home from './routes/Home'
 import Assignment from './routes/Assignment'
 import Notice from "./routes/Notice";
 import Quiz from "./routes/Quiz";
