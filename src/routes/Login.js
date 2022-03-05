@@ -12,7 +12,7 @@ export class Login extends Component {
     return (
       <>
         <div className=" px-8 py-12  bg-gray-100  ">
-          <form className="bg-white shadow-md rounded-md px-8 pt-6 pb-8 mb-4 max-w-md mx-auto sm:max-w-xl">
+          <form className="bg-white shadow-md rounded-2xl px-8 pt-6 pb-8 mb-4 max-w-md mx-auto sm:max-w-xl">
             <h1 className="text-2xl font-bold uppercase text-center mb-14 mt-2">
               Login Here
             </h1>
