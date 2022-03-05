@@ -20,13 +20,13 @@ class Home extends React.Component {
             <button className="">
             <NavLink to={"."}
               className="border-2 border-Primary-color  bg-Primary-color hover:bg-hover-primary transition ease-in-out duration-400 px-7 py-4 h-auto w-auto rounded-full cursor-pointer hover:shadow-lg text-white font-semibold shadow-2xl shadow-[#f36730] mr-3">
-              Student
+              Students
             </NavLink>
             </button>
             <button>
             <NavLink to={"."}
               className="border-2 border-Primary-color transition-all ease-in-out duration-400 px-7 py-4 h-auto w-auto rounded-full cursor-pointer hover:bg-hover-primary hover:text-white text-Primary-color font-semibold">
-              Teacher
+              Teachers
             </NavLink>
             </button>
           </div>
