@@ -16,11 +16,17 @@ class Home extends React.Component {
           <div className="text pr-10 max-sm:pr-0 max-sm:flex max-sm:flex-wrap max-sm:justify-center sm:ml-16">
             <h3 className="tracking-widest uppercase text-[25px] max-sm:text-[18px]">Welcome to kes's</h3>
             <h1 className=" font-bold uppercase mb-5 text-Secondary-color max-sm:text-[28px] ">Learners College</h1>
-            <p className="mb-12 max-sm:text-center max-sm:mb-7">Learners College of Arts and Commerce is one of the best colleges in the Mumbai.</p> 
-            <button className="pulsate-bck">
+            <p className="mb-12 max-sm:text-center max-sm:mb-10">Learners College of Arts and Commerce is one of the best colleges in the Mumbai.</p> 
+            <button className="">
             <NavLink to={"."}
-              className="bg-Primary-color hover:bg-hover-primary transition ease-in-out duration-400 px-7 py-4 h-auto w-auto rounded-full cursor-pointer hover:shadow-lg text-white font-semibold shadow-2xl shadow-[#f36730] ">
-              Start Learning
+              className="border-2 border-Primary-color  bg-Primary-color hover:bg-hover-primary transition ease-in-out duration-400 px-7 py-4 h-auto w-auto rounded-full cursor-pointer hover:shadow-lg text-white font-semibold shadow-2xl shadow-[#f36730] mr-3">
+              Student
+            </NavLink>
+            </button>
+            <button>
+            <NavLink to={"."}
+              className="border-2 border-Primary-color transition-all ease-in-out duration-400 px-7 py-4 h-auto w-auto rounded-full cursor-pointer hover:bg-hover-primary hover:text-white text-Primary-color font-semibold">
+              Teacher
             </NavLink>
             </button>
           </div>
