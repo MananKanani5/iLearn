@@ -37,6 +37,7 @@ h3{
 }
 
 .fade-in {
+  z-index: 0;
 	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
@@ -60,5 +61,45 @@ h3{
   }
   100% {
     opacity: 1;
+  }
+}
+
+.pulsate-bck {
+	-webkit-animation: pulsate-bck 1.5s ease-in-out infinite both;
+	        animation: pulsate-bck 1.5s ease-in-out infinite both;
+}
+
+
+/**
+ * ----------------------------------------
+ * animation pulsate-bck
+ * ----------------------------------------
+ */
+ @-webkit-keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }

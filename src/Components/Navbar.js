@@ -22,7 +22,7 @@ const Navbar = (props) => {
   };
   return (
     <>
-      <div className="bg-Secondary-color text-white top-0 w-full sticky ">
+      <div className="bg-Secondary-color text-white top-0 w-full sticky z-10">
         <div className="flex justify-evenly  items-center py-2 px-5 max-sm:pl-3 max-sm:pr-3">
           <div className="hambuger block md:hidden">
             <button onClick={showMenu} className=" ml-2">
