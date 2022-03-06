@@ -34,7 +34,7 @@ const Navbar = (props) => {
           <div className="logo flex-col justify-center items-center mr-16">
 
             <div className="clogo ">
-              <NavLink to="/"><img src={logo} className="w-[400px]" alt="KES Logo" /></NavLink>
+              <NavLink to="/"><img src={logo} className="w-[400px]" alt="KES Logo" loading="eager" /></NavLink>
             </div>
           </div>
           <div className="md-options w-full hidden md:flex flex-row space-x-7">
