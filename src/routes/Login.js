@@ -57,6 +57,7 @@ export class Login extends Component {
                 type="text"
                 placeholder="Your Email"
                 name="email"
+                autoComplete="email"
                 required
               />
             </div>
@@ -74,8 +75,9 @@ export class Login extends Component {
                 id="password"
                 onChange={this.setValue("password")}
                 value={password}
-                placeholder="Create Password"
+                placeholder="Enter Password"
                 name="password"
+                autoComplete="current-password"
                 required
               />
               <p className="text-Primary-color float-right p-2 cursor-pointer hover:text-hover-primary">

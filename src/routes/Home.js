@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logo_black from '../img/logo_black.png';
 import bg from '../img/home/bg.png';
 
 class Home extends React.Component {

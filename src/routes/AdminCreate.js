@@ -55,7 +55,7 @@ class AdminCreate extends React.Component {
     
     return (
       <div className=" px-8 py-12  bg-gray-100 m-z ">
-        <form className="bg-white shadow-md rounded-2xl px-8 pt-6 pb-8 mb-4 max-w-md mx-auto sm:max-w-xl" onSubmit={handleSubmit} autocomplete="on">
+        <form className="bg-white shadow-md rounded-2xl px-8 pt-6 pb-8 mb-4 max-w-md mx-auto sm:max-w-xl" onSubmit={handleSubmit} autoComplete="on">
           <h1 className="text-2xl font-bold uppercase text-center mb-14 mt-2" >
             Create New Admin
           </h1>
@@ -109,6 +109,7 @@ class AdminCreate extends React.Component {
               id="email"
               onChange={this.setValue("email")}
               value={email}
+              autoComplete="email"
               type="email" placeholder="Your Email" required
             />
           </div>
@@ -178,6 +179,7 @@ class AdminCreate extends React.Component {
               id="password"
               onChange={this.setValue("password")}
               value={password}
+              autoComplete="new-password"
               placeholder="Create Password" required />
           </div>
 
@@ -193,6 +195,7 @@ class AdminCreate extends React.Component {
               id="confirmpass"
               onChange={this.setValue("confirmpass")}
               value={confirmpass}
+              autoComplete="new-password"
               placeholder="Confirm Password" required />
           </div>
       </div>
