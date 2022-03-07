@@ -31,7 +31,7 @@ const Navbar = (props) => {
               <i className={` ${menu === 'hidden' ? 'hidden' : 'block'} fa fa-solid fa-close text-2xl h-4 w-4`}></i>
             </button>
           </div>
-          <div className="logo flex-col justify-center items-center mr-16">
+          <div className="logo flex-col justify-center items-center mr-14">
 
             <div className="clogo ">
               <NavLink to="/"><img src={logo} className="w-[400px]" alt="KES Logo" loading="eager" /></NavLink>
