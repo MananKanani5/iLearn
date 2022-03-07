@@ -15,11 +15,48 @@ class AdminCreate extends React.Component {
     this.setState({ [fieldName]: evt.target.value });
 
   render() {
+
     const { firstName, lastName, email, tel, alttel, add, password, confirmpass } = this.state;
+
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      console.log("Registration Submit Clicked");
+      const response = await fetch("http://localhost:5000/api/Admin/Register",{
+        method:"POST",
+        headers:{
+          'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify({
+          "Uid" :"abscewr",
+          "Fname":firstName,
+          "Lname":lastName,
+          "Email":email,
+          "Phone":tel,
+          "Alternate_Phone":alttel,
+          "Address":add,
+          "Role":"admin",
+          "UserName":"Gaurav4yadavy3590",
+          "Password":password
+        })
+      });
+      const json=await response.json();
+      console.log(json);
+      if(json.success)
+      {
+        console.log("Registered");
+        //TODO redirect to logged in main page
+      }
+      else{
+        console.log('Cannot Register: '+json.error);
+        //TODO show respective error
+      }
+    }
+
+    
     return (
       <div className=" px-8 py-12  bg-gray-100 m-z ">
-        <form className="bg-white shadow-md rounded-2xl px-8 pt-6 pb-8 mb-4 max-w-md mx-auto sm:max-w-xl">
-          <h1 className="text-2xl font-bold uppercase text-center mb-14 mt-2">
+        <form className="bg-white shadow-md rounded-2xl px-8 pt-6 pb-8 mb-4 max-w-md mx-auto sm:max-w-xl" onSubmit={handleSubmit}>
+          <h1 className="text-2xl font-bold uppercase text-center mb-14 mt-2" >
             Create New Admin
           </h1>
 
@@ -120,7 +157,7 @@ class AdminCreate extends React.Component {
             </label>
             <textarea
               className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
-              id="email"
+              id="address"
               onChange={this.setValue("add")}
               value={add}
               type="text" placeholder="Address" rows={5} required

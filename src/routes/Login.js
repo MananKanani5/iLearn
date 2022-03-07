@@ -8,11 +8,36 @@ export class Login extends Component {
   setValue = (fieldName) => (evt) =>
     this.setState({ [fieldName]: evt.target.value });
   render() {
+    
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      console.log("Submit Clicked")
+      //TODO API
+      const response = await fetch("http://localhost:5000/api/Student/Login",{
+        method:"POST",
+        headers:{
+          'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify({UserName:this.state.email,Password:this.state.password})
+      });
+      const json=await response.json();
+      console.log(json);
+      if(json.success)
+      {
+        console.log("You are in");
+        console.log("Role="+json.role);
+        //TODO redirect to logged in main page
+      }
+      else{
+        console.log('You are not in: '+json.error);
+        //TODO show respective error
+      }
+    };
     const { email, password } = this.state;
     return (
       <>
         <div className=" px-8 py-12  bg-gray-100  ">
-          <form className="bg-white shadow-md rounded-2xl px-8 pt-6 pb-8 mb-4 max-w-md mx-auto sm:max-w-xl">
+          <form className="bg-white shadow-md rounded-2xl px-8 pt-6 pb-8 mb-4 max-w-md mx-auto sm:max-w-xl" onSubmit={handleSubmit}>
             <h1 className="text-2xl font-bold uppercase text-center mb-14 mt-2">
               Login Here
             </h1>
@@ -29,8 +54,9 @@ export class Login extends Component {
                 id="email"
                 onChange={this.setValue("email")}
                 value={email}
-                type="email"
+                type="text"
                 placeholder="Your Email"
+                name="email"
                 required
               />
             </div>
@@ -49,6 +75,7 @@ export class Login extends Component {
                 onChange={this.setValue("password")}
                 value={password}
                 placeholder="Create Password"
+                name="password"
                 required
               />
               <p className="text-Primary-color float-right p-2 cursor-pointer hover:text-hover-primary">
