@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom';
 class Assignment extends React.Component {
   state = {
     title: "",
@@ -40,8 +41,64 @@ class Assignment extends React.Component {
       }
     }
     return (
-      <section className="px-8 max-sm:px-5 py-12  bg-[#fff7f2] m-z fade-in">
-        <form className="bg-white shadow-md rounded-2xl px-8 max-sm:px-5 pt-6 pb-8 mb-4 max-w-md mx-auto sm:max-w-2xl" onSubmit={handleSubmit} autoComplete="on">
+      <section className="px-8 max-sm:px-5 py-12  bg-[#fff7f2] m-z fade-in flex justify-between flex-wrap">
+        <div className='sm:w-3/5 max-sm:mb-10'>
+    
+        <div className="bg-white shadow-md rounded-2xl px-8 max-sm:px-5 pt-6 pb-8 mb-4 sm:max-w-[95%]">
+        <h1 className="text-2xl font-bold uppercase text-center mb-14 mt-2 leading-normal" >
+            Assignments
+          </h1>
+          <hr className='mb-14 -mt-5' />
+
+        <div className='list mt-5 '>
+            <ul className='m-2'>
+              <li className='my-6'>
+                <NavLink to={""} className="hover:text-Primary-color transition ease-in-out duration-400"> <h3>1. Assignment One - Lorem ipsum sit... </h3></NavLink>
+                <div className='meta text-gray-500 sm:pl-4 max-sm:pt-2 flex flex-wrap'>
+                <p className='sm:mr-5'>Class: TY-BSCIT</p>
+                <p className='sm:mr-5'>Created On: 07-03-2022</p>
+                <p className='sm:mr-5'>End Date: 07-03-2022</p>
+                <p className='sm:mr-5'>Submited: 18</p>
+                </div>
+              </li>
+              <hr />
+              <li className='my-6'>
+                <NavLink to={""} className="hover:text-Primary-color transition ease-in-out duration-400"> <h3>2. Assignment Two - Lorem ipsum sit... </h3></NavLink>
+                <div className='meta text-gray-500 sm:pl-4 max-sm:pt-2 flex flex-wrap '>
+                <p className='sm:mr-5'>Class: TY-BSCIT</p>
+                <p className='sm:mr-5'>Created On: 07-03-2022</p>
+                <p className='sm:mr-5'>End Date: 07-03-2022</p>
+                <p className='sm:mr-5'>Submited: 15</p>
+                </div>
+              </li>
+              <hr />
+              <li className='my-6'>
+                <NavLink to={""} className="hover:text-Primary-color transition ease-in-out duration-400"> <h3>3. Assignment Three - Lorem ipsum sit... </h3></NavLink>
+                <div className='meta text-gray-500 sm:pl-4 max-sm:pt-2 flex flex-wrap '>
+                <p className='sm:mr-5'>Class: TY-BSCIT</p>
+                <p className='sm:mr-5'>Created On: 07-03-2022</p>
+                <p className='sm:mr-5'>End Date: 07-03-2022</p>
+                <p className='sm:mr-5'>Submited: 15</p>
+                </div>
+              </li>
+              <hr />
+              <li className='my-6'>
+                <NavLink to={""} className="hover:text-Primary-color transition ease-in-out duration-400"> <h3>4. Assignment Four - Lorem ipsum sit... </h3></NavLink>
+                <div className='meta text-gray-500 sm:pl-4 max-sm:pt-2 flex flex-wrap '>
+                <p className='sm:mr-5'>Class: TY-BSCIT</p>
+                <p className='sm:mr-5'>Created On: 07-03-2022</p>
+                <p className='sm:mr-5'>End Date: 07-03-2022</p>
+                <p className='sm:mr-5'>Submited: 15</p>
+                </div>
+              </li>
+            </ul>
+        </div>
+
+        </div>
+        </div>
+
+        <div className='sm:w-2/5 w-full'>
+        <form className="bg-white shadow-md rounded-2xl px-8 max-sm:px-5 pt-6 pb-8  " onSubmit={handleSubmit} autoComplete="on">
           <h1 className="text-2xl font-bold uppercase text-center mb-14 mt-2" >
             Create New Assignment
           </h1>
@@ -86,22 +143,23 @@ class Assignment extends React.Component {
             <input className="w-full py-2 px-4  font-normal bg-white bg-clip-padding border border-gray-300 rounded-lg " type="file" id="formFileMultiple" multiple />
           </div> */}
 
-          <div class="m-4">
+          <div className="m-4">
           <label
               className="block text-gray-700 text-sm font-bold mb-2"
               htmlFor="Address">
               Attach Documents
             </label>
-              <label class="py-2 px-4 flex items-center bg-white rounded-lg tracking-wide border border-gray-300 cursor-pointer ">
-                  <svg class="w-8 h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <label className="py-2 px-4 flex items-center bg-white rounded-lg tracking-wide border border-gray-300 cursor-pointer ">
+                  <svg className="w-8 h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                       <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
                   </svg>
-                  <span class="ml-2 text-base leading-normal">Select files</span>
-                  <input type='file' class="hidden" multiple />
+                  <span className="ml-2 text-base leading-normal">Select files</span>
+                  <input type='file' className="hidden" multiple />
               </label>
           </div>
 
         </form>
+        </div>
       </section>
     );
   }
