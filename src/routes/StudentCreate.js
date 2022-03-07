@@ -224,6 +224,8 @@ class StudentCreate extends React.Component {
             </label>
             <select name="cars" id="cars" className=" bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full leading-normal" onfocus='this.size=10;' onblur='this.size=0;' onchange='this.size=1; this.blur();'>
 
+                <option value="" className="text-slate-400">Please Select Department and Class</option>
+
                 <optgroup label="BSCIT">
                 <option value="FY-BSCIT">FY-BSCIT</option>
                 <option value="SY-BSCIT">SY-BSCIT</option>
