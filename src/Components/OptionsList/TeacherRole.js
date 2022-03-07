@@ -35,6 +35,10 @@ const TeacherRole = () => {
         color: isActive ? '#f36730' : '',
       })} to="/StudentCreate" className=" hover:text-Primary-color transition ease-in-out duration-400 font-semibold"> Create Student</NavLink>
 
+<NavLink style={({ isActive }) => ({
+        color: isActive ? '#f36730' : '',
+      })} to="/TeacherCreate" className=" hover:text-Primary-color transition ease-in-out duration-400 font-semibold"> Create Teacher</NavLink>
+
     </>
   )
 }
