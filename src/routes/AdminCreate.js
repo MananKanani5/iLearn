@@ -55,7 +55,7 @@ class AdminCreate extends React.Component {
     
     return (
       <div className=" px-8 py-12  bg-gray-100 m-z ">
-        <form className="bg-white shadow-md rounded-2xl px-8 pt-6 pb-8 mb-4 max-w-md mx-auto sm:max-w-xl" onSubmit={handleSubmit}>
+        <form className="bg-white shadow-md rounded-2xl px-8 pt-6 pb-8 mb-4 max-w-md mx-auto sm:max-w-xl" onSubmit={handleSubmit} autocomplete="on">
           <h1 className="text-2xl font-bold uppercase text-center mb-14 mt-2" >
             Create New Admin
           </h1>
