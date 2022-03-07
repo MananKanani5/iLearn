@@ -42,7 +42,11 @@ const Navbar = (props) => {
           </div>
 
           <div className="navigation relative inline-block">
-            <NavLink to={"/Login"} className="block profile bg-Primary-color hover:bg-hover-primary transition ease-in-out duration-400 px-6 py-4 h-auto w-auto rounded-full hover:shadow-lg cursor-pointer"><i className="fa fa-user-alt flex"> <span className="font-sans font-semibold ml-2 max-sm:hidden"> Login </span></i>
+            <NavLink to={""} className="block profile bg-Primary-color hover:bg-hover-primary transition ease-in-out duration-400 px-6 py-4 h-auto w-auto rounded-full hover:shadow-lg cursor-pointer">
+              <i className="fa fa-user-alt flex items-center"> 
+                <span className="font-sans font-semibold ml-2 max-sm:hidden"> Login </span>
+                <i className="fa fa-angle-down ml-2"></i>
+                </i> 
             </NavLink>
             <div className="navigation-content shadow-lg border rounded-md absolute right-3 hidden z-10 min-w-[160px] bg-white">
               <NavLink to={"/Dashboard"} className="block p-3 hover:bg-slate-100 font-semibold text-black hover:text-hover-primary hover:rounded-md">Dashboard</NavLink>
