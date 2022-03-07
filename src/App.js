@@ -11,6 +11,7 @@ import Assignment from './routes/Assignment'
 import Notice from "./routes/Notice";
 import Quiz from "./routes/Quiz";
 import Login from "./routes/Login"
+import StudentCreate from './routes/StudentCreate';
 
 // lazzy loading components import
 
@@ -38,6 +39,7 @@ function App() {
           <Route path="/Notice" element={<Notice  />} />
           <Route path="/Quiz" element={<Quiz  />} />
           <Route path='/AdminCreate' element={<AdminCreate/>} />
+          <Route path='/StudentCreate' element={<StudentCreate />} />
           <Route path="/Login" element={<Login />} />
         </Routes>
       </BrowserRouter>

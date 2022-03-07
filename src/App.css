@@ -17,6 +17,9 @@
     
   }
 }
+option:hover{
+  background-color:var(--Primary);
+}
 
 h1{
   font-size: 40px;

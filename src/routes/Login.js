@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export class Login extends Component {
   state = {
-    email: "",
+    username: "",
     password: "",
   };
   setValue = (fieldName) => (evt) =>
@@ -18,7 +18,7 @@ export class Login extends Component {
         headers:{
           'Content-Type' : 'application/json'
         },
-        body: JSON.stringify({UserName:this.state.email,Password:this.state.password})
+        body: JSON.stringify({UserName:this.state.username,Password:this.state.password})
       });
       const json=await response.json();
       console.log(json);
@@ -33,7 +33,7 @@ export class Login extends Component {
         //TODO show respective error
       }
     };
-    const { email, password } = this.state;
+    const { username, password } = this.state;
     return (
       <>
         <div className=" px-8 py-12  bg-gray-100  ">
@@ -45,19 +45,19 @@ export class Login extends Component {
             <div className="m-4">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="email"
+                htmlFor="username"
               >
-                E-mail
+                Username
               </label>
               <input
                 className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
-                id="email"
-                onChange={this.setValue("email")}
-                value={email}
+                id="username"
+                onChange={this.setValue("username")}
+                value={username}
                 type="text"
-                placeholder="Your Email"
-                name="email"
-                autoComplete="email"
+                placeholder="Username"
+                name="username"
+                autoComplete="username"
                 required
               />
             </div>
