@@ -37,6 +37,8 @@ class StudentCreate extends React.Component {
           "Email":email,
           "Phone":tel,
           "Alternate_Phone":alttel,
+          "Parent_Email":parentemail,
+          "Parant_Phone":paranttel,
           "Address":add,
           "Role":"student",
           "UserName":"Gaurav4yadavy3590",
@@ -252,8 +254,6 @@ class StudentCreate extends React.Component {
                 </optgroup>
 
             </select>
-
-
       </div>
 
 
