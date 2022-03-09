@@ -55,40 +55,40 @@ class Assignment extends React.Component {
               <li className='my-6'>
                 <NavLink to={""} className="hover:text-Primary-color transition ease-in-out duration-400"> <h3>1. Assignment One - Lorem ipsum sit... </h3></NavLink>
                 <div className='meta text-gray-500 sm:pl-4 max-sm:pt-2 flex flex-wrap'>
-                <p className='sm:mr-5'>Class: TY-BSCIT</p>
-                <p className='sm:mr-5'>Created On: 07-03-2022</p>
-                <p className='sm:mr-5'>End Date: 07-03-2022</p>
-                <p className='sm:mr-5'>Submited: 18</p>
+                <p>Class: TY-BSCIT</p>  
+                <p>Created On: 07-03-2022</p>  
+                <p>End Date: 07-03-2022</p>  
+                <p>Submited: 18</p>
                 </div>
               </li>
               <hr />
               <li className='my-6'>
                 <NavLink to={""} className="hover:text-Primary-color transition ease-in-out duration-400"> <h3>2. Assignment Two - Lorem ipsum sit... </h3></NavLink>
                 <div className='meta text-gray-500 sm:pl-4 max-sm:pt-2 flex flex-wrap '>
-                <p className='sm:mr-5'>Class: TY-BSCIT</p>
-                <p className='sm:mr-5'>Created On: 07-03-2022</p>
-                <p className='sm:mr-5'>End Date: 07-03-2022</p>
-                <p className='sm:mr-5'>Submited: 15</p>
+                <p>Class: TY-BSCIT</p>  
+                <p>Created On: 07-03-2022</p>  
+                <p>End Date: 07-03-2022</p>  
+                <p>Submited: 15</p> 
                 </div>
               </li>
               <hr />
               <li className='my-6'>
                 <NavLink to={""} className="hover:text-Primary-color transition ease-in-out duration-400"> <h3>3. Assignment Three - Lorem ipsum sit... </h3></NavLink>
                 <div className='meta text-gray-500 sm:pl-4 max-sm:pt-2 flex flex-wrap '>
-                <p className='sm:mr-5'>Class: TY-BSCIT</p>
-                <p className='sm:mr-5'>Created On: 07-03-2022</p>
-                <p className='sm:mr-5'>End Date: 07-03-2022</p>
-                <p className='sm:mr-5'>Submited: 15</p>
+                <p>Class: TY-BSCIT</p>  
+                <p>Created On: 07-03-2022</p>  
+                <p>End Date: 07-03-2022</p>  
+                <p>Submited: 15</p> 
                 </div>
               </li>
               <hr />
               <li className='my-6'>
                 <NavLink to={""} className="hover:text-Primary-color transition ease-in-out duration-400"> <h3>4. Assignment Four - Lorem ipsum sit... </h3></NavLink>
                 <div className='meta text-gray-500 sm:pl-4 max-sm:pt-2 flex flex-wrap '>
-                <p className='sm:mr-5'>Class: TY-BSCIT</p>
-                <p className='sm:mr-5'>Created On: 07-03-2022</p>
-                <p className='sm:mr-5'>End Date: 07-03-2022</p>
-                <p className='sm:mr-5'>Submited: 15</p>
+                <p>Class: TY-BSCIT</p>  
+                <p>Created On: 07-03-2022</p>  
+                <p>End Date: 07-03-2022</p>  
+                <p>Submited: 15</p>
                 </div>
               </li>
             </ul>

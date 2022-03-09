@@ -39,6 +39,14 @@ h3{
   display: block;
 }
 
+/* Assignment Page */
+
+.list ul li p:not(:last-child)::after{
+  content: "|";
+  margin: 0px 7px;
+  color: #000000;
+}
+
 .fade-in {
   z-index: 0;
 	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
