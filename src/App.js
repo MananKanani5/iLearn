@@ -13,6 +13,7 @@ import Quiz from "./routes/Quiz";
 import Login from "./routes/Login"
 import StudentCreate from './routes/StudentCreate';
 import TeacherCreate from './routes/TeacherCreate';
+import AssignmentDetails from './routes/AssignmentDetails';
 
 // lazzy loading components import
 
@@ -36,6 +37,7 @@ function App() {
           <Route path='/'  element={<Home />} />
           <Route path='/About' element={<About />} />
           <Route path='/Assignment' element={<Assignment />} />
+          <Route path='/AssignmentDetails' element={<AssignmentDetails />} />
           <Route path='/Attendance' element={<Attendance/>} />
           <Route path="/Notice" element={<Notice  />} />
           <Route path="/Quiz" element={<Quiz  />} />

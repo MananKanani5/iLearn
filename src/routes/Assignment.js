@@ -16,7 +16,7 @@ class Assignment extends React.Component {
     const handleSubmit = async (e) => {
       e.preventDefault();
       console.log("Registration Submit Clicked");
-      const response = await fetch("http://localhost:5000/api/Admin/Register", {
+      const response = await fetch("http://localhost:5000/api/Assignment/Create", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'
@@ -44,7 +44,7 @@ class Assignment extends React.Component {
       <section className="px-8 max-sm:px-5 py-12  bg-[#fff7f2] m-z fade-in flex justify-between flex-wrap">
         <div className='sm:w-3/5 max-sm:mb-10'>
     
-        <div className="bg-white shadow-md rounded-2xl px-8 max-sm:px-5 pt-6 pb-8 mb-4 sm:max-w-[95%]">
+        <div className="bg-white shadow-md rounded-2xl px-8 max-sm:px-5 py-7 mb-4 sm:max-w-[95%]">
         <h1 className="text-2xl font-bold uppercase text-center mb-14 mt-2 leading-normal" >
             Assignments
           </h1>
@@ -53,7 +53,7 @@ class Assignment extends React.Component {
         <div className='list mt-5 '>
             <ul className='m-2'>
               <li className='my-6'>
-                <NavLink to={""} className="hover:text-Primary-color transition ease-in-out duration-400"> <h3>1. Assignment One - Lorem ipsum sit... </h3></NavLink>
+                <NavLink to={"/AssignmentDetails"} className="hover:text-Primary-color transition ease-in-out duration-400"> <h3>1. Assignment One - Lorem ipsum sit... </h3></NavLink>
                 <div className='meta text-gray-500 sm:pl-4 max-sm:pt-2 flex flex-wrap'>
                 <p>Class: TY-BSCIT</p>  
                 <p>Created On: 07-03-2022</p>  
@@ -98,7 +98,7 @@ class Assignment extends React.Component {
         </div>
 
         <div className='sm:w-2/5 w-full'>
-        <form className="bg-white shadow-md rounded-2xl px-8 max-sm:px-5 pt-6 pb-8  " onSubmit={handleSubmit} autoComplete="on">
+        <form className="bg-white shadow-md rounded-2xl px-8 max-sm:px-5 py-7  " onSubmit={handleSubmit} autoComplete="on">
           <h1 className="text-2xl font-bold uppercase text-center mb-14 mt-2" >
             Create New Assignment
           </h1>
