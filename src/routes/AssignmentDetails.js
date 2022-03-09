@@ -31,16 +31,16 @@ const AssignmentDetails = () => {
         </div>
     </div>
 
-    <div className='sm:w-[25%] w-full shadow-md rounded-2xl bg-white px-14 max-sm:px-5 py-14 max-sm:my-5 flex flex-col items-stretch h-fit md:sticky top-[120px]'>
+    <div className='sm:w-[25%] w-full shadow-md rounded-2xl bg-white px-14 max-sm:px-5 py-14 max-sm:py-5 flex flex-col items-stretch h-fit md:sticky top-[120px]'>
     <span className="text-2xl font-bold uppercase text-center mb-12 text-Secondary-color max-md:hidden" >
                 statistics
             </span>
     
-        <div className="hambuger flex justify-between items-center md:hidden">
-        <span className="text-2xl font-bold uppercase text-Secondary-color" >
+        <div className="hambuger flex justify-between items-center md:hidden my-2">
+        <span className="text-2xl font-bold uppercase text-Secondary-color " >
                 statistics
             </span>
-            <button onClick={showStat} className="">
+            <button onClick={showStat} className="text-Secondary-color">
                 
                 <i className={` ${menu === 'hidden' ? 'block' : 'hidden'} fa fa-solid fa-bars text-2xl `}></i>
 
@@ -83,7 +83,7 @@ const AssignmentDetails = () => {
 
 
         <div className='sm-options'>
-        <div className={` ${menu} mt-7`}>
+        <div className={` ${menu} mt-8`}>
         <ul  >
             <li className='mb-8'>
                 <i className='text-Secondary-color mr-2 fa fa-graduation-cap w-5'></i>
@@ -112,7 +112,7 @@ const AssignmentDetails = () => {
         </ul>
         
 
-        <button className='border-2 border-Primary-color  bg-Primary-color hover:bg-hover-primary transition ease-in-out duration-400 px-7 py-4 h-auto w-auto rounded-full cursor-pointer hover:shadow-2xl text-white font-semibold shadow-lg my-7 '> Edit Date</button>
+        <button className='border-2 border-Primary-color  bg-Primary-color hover:bg-hover-primary transition ease-in-out duration-400 px-7 py-4 h-auto w-auto rounded-full cursor-pointer hover:shadow-2xl text-white font-semibold shadow-lg my-5 '> Edit Date</button>
         </div>
         </div>
     </div>
