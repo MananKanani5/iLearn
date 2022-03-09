@@ -32,7 +32,7 @@ const AssignmentDetails = () => {
     </div>
 
     <div className='sm:w-[25%] w-full shadow-md rounded-2xl bg-white px-14 max-sm:px-5 py-14 max-sm:my-5 flex flex-col items-stretch h-fit md:sticky top-[120px]'>
-    <span className="text-2xl font-bold uppercase text-center mb-10 text-Secondary-color max-md:hidden" >
+    <span className="text-2xl font-bold uppercase text-center mb-12 text-Secondary-color max-md:hidden" >
                 statistics
             </span>
     
@@ -49,7 +49,7 @@ const AssignmentDetails = () => {
         </div>
 
 
-        <div className="md-options hidden md:flex flex-col space-x-7">
+        <div className="md-options hidden md:flex flex-col">
         <ul  >
             <li className='mb-8'>
                 <i className='text-Secondary-color mr-2 fa fa-graduation-cap w-5'></i>
