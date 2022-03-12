@@ -1,19 +1,6 @@
 import "./App.css";
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Navbar from "./Components/Navbar"
-// import Footer from './Components/Footer'
-// import AdminCreate from './routes/AdminCreate'
-// import Attendance from './routes/Attendance'
-// import About from './routes/About'
-// import Home from './routes/Home'
-// import Assignment from './routes/Assignment'
-// import Notice from "./routes/Notice";
-// import Quiz from "./routes/Quiz";
-// import Login from "./routes/Login"
-// import StudentCreate from './routes/StudentCreate';
-// import TeacherCreate from './routes/TeacherCreate';
-// import AssignmentDetails from './routes/AssignmentDetails';
 
 // lazy loading components, routes import
 const Navbar = React.lazy(() => import('./Components/Navbar'));
@@ -32,13 +19,10 @@ const AssignmentDetails = lazy(() => import('./routes/AssignmentDetails'));
 
 function App() {
   return (
-    <>
-    
+    <>       
       <Router> 
-          <Suspense fallback={<div></div>}>
-          <Suspense fallback={<div></div>}>
-            <Navbar />
-          </Suspense>
+      <Suspense fallback={<div></div>}>
+      <Navbar />
         <Routes>
           <Route path='/'  element={<Home />} />
           <Route path='/About' element={<About />} />
@@ -54,6 +38,7 @@ function App() {
         </Routes>
         </Suspense>
       </Router>
+      
       <Suspense fallback={<div> </div>}>
       <Footer />
       </Suspense>

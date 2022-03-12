@@ -8,7 +8,6 @@ class Home extends React.Component {
   render() {
     return (
       <>
-
       <section className="bg-[#fff7f2] hero py-24 px-10 flex justify-between items-center   max-sm:flex-wrap max-sm:px-5 max-sm:py-14 fade-in">
 
           <div className="img w-2/4 max-sm:w-full max-sm:mb-10 ">
@@ -34,7 +33,6 @@ class Home extends React.Component {
           </div>
         </section>
 
-
         {/* <section className="bg-white about py-24 px-10 flex justify-between items-center max-sm:flex-wrap max-sm:flex-col-reverse max-sm:px-5 max-sm:py-14 fade-in ">
           <div className="info flex-1 mr-5 max-sm:flex max-sm:flex-wrap max-sm:justify-center">
             <h3 className="text-right max-sm:text-[18px]">About Us</h3>
@@ -45,7 +43,7 @@ class Home extends React.Component {
             <img src={logo_black} alt="bg" loading="lazy" />
           </div>
         </section> */}
-      </>
+        </>
     );
   }
 }
