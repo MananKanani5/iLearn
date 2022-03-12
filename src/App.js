@@ -16,7 +16,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import AssignmentDetails from './routes/AssignmentDetails';
 
 // lazy loading components, routes import
-
+import BodyLoader from './Components/BodyLoader'
 const Navbar = React.lazy(() => import('./Components/Navbar'));
 const Footer = React.lazy(() => import('./Components/Footer'));
 const AdminCreate = lazy(() => import('./routes/AdminCreate'));
@@ -36,7 +36,7 @@ function App() {
     <>
     
       <Router> 
-          <Suspense fallback={<div className="loader"></div>}>
+          <Suspense fallback={<div> {<BodyLoader />} </div>}>
           <Suspense fallback={<div></div>}>
             <Navbar />
           </Suspense>
@@ -55,7 +55,7 @@ function App() {
         </Routes>
         </Suspense>
       </Router>
-      <Suspense fallback={<div className="loader"></div>}>
+      <Suspense fallback={<div> </div>}>
       <Footer />
       </Suspense>
     </>
