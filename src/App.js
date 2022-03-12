@@ -36,8 +36,8 @@ function App() {
     <>
     
       <Router> 
-          <Suspense fallback={<div>Routes</div>}>
-          <Suspense fallback={<div>Navbar</div>}>
+          <Suspense fallback={<div className="loader"></div>}>
+          <Suspense fallback={<div></div>}>
             <Navbar />
           </Suspense>
         <Routes>
@@ -55,7 +55,7 @@ function App() {
         </Routes>
         </Suspense>
       </Router>
-      <Suspense fallback={<div>Footer</div>}>
+      <Suspense fallback={<div className="loader"></div>}>
       <Footer />
       </Suspense>
     </>
