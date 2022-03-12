@@ -12,7 +12,7 @@ class Home extends React.Component {
       <section className="bg-[#fff7f2] hero py-24 px-10 flex justify-between items-center   max-sm:flex-wrap max-sm:px-5 max-sm:py-14 fade-in">
 
           <div className="img w-2/4 max-sm:w-full max-sm:mb-10 ">
-            <img src={bg} alt="bg" loading="lazy" />
+            <img src={bg} alt="bg" loading="eager" />
           </div>
 
           <div className="text pr-10 max-sm:pr-0 max-sm:flex max-sm:flex-wrap max-sm:justify-center sm:ml-16">
