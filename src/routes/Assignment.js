@@ -98,7 +98,8 @@ class Assignment extends React.Component {
         </div>
 
         <div className='sm:w-2/5 w-full'>
-        <form className="bg-white shadow-md rounded-2xl px-8 max-sm:px-5 py-7  " onSubmit={handleSubmit} autoComplete="on">
+          <div className="bg-white shadow-md rounded-2xl px-8 max-sm:px-5 py-7">
+        <form onSubmit={handleSubmit} autoComplete="on">
           <h1 className="text-2xl font-bold uppercase text-center mb-14 mt-2" >
             Create New Assignment
           </h1>
@@ -157,8 +158,9 @@ class Assignment extends React.Component {
                   <input type='file' className="hidden" multiple />
               </label>
           </div>
-
         </form>
+        </div>
+
         </div>
       </section>
     );
