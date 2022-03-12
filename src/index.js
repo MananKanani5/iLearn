@@ -27,7 +27,7 @@ class Loader extends React.Component {
 }
 
 function demoAsyncCall() {
-  return new Promise((resolve) => setTimeout(() => resolve(), 1500));
+  return new Promise((resolve) => setTimeout(() => resolve(), 3000));
 }
 
 ReactDOM.render(

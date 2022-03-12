@@ -1,10 +1,10 @@
 import "./App.css";
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import Footer from './Components/Footer';
 // lazy loading components, routes import
 const Navbar = React.lazy(() => import('./Components/Navbar'));
-const Footer = React.lazy(() => import('./Components/Footer'));
+
 const AdminCreate = lazy(() => import('./routes/AdminCreate'));
 const Attendance = lazy(()=>import('./routes/Attendance'));
 const About = lazy(() => import('./routes/About'));
@@ -39,9 +39,7 @@ function App() {
         </Suspense>
       </Router>
       
-      <Suspense fallback={<div> </div>}>
       <Footer />
-      </Suspense>
     </>
   );
 }
