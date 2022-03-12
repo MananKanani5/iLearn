@@ -33,10 +33,11 @@ const AssignmentDetails = () => {
                         <i className={` ${assignmentinfo === 'block' ? 'block' : 'hidden'} fa fa-angle-down text-2xl `}></i>
                     </div>
                 </button>
-                <div className={`${assignmentinfo}`}>
-                    <h1 className="text-2xl font-semibold mb-14 pt-10 leading-normal text-Secondary-color max-sm:text-lg" >
+                <h1 className="text-2xl font-semibold mb-14 pt-10 leading-normal text-Secondary-color max-sm:text-lg" >
                         1. Assignment One - Lorem ipsum sit amet consectetur, adipisicing elit. Dolorem corporis ducimus sequi, enim sint ipsam porro cupiditate? Animi, dolore sequi.
                     </h1>
+                <div className={`${assignmentinfo}`}>
+                    
                     <hr className='mb-12 mt-7' />
                     <h3 className='mb-3 text-Secondary-color'>Description: </h3>
                     <p className='Description text-justify mb-10'>
