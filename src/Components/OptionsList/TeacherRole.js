@@ -16,18 +16,7 @@ const TeacherRole = () => {
       <NavLink style={({ isActive }) => ({
         color: isActive ? '#f36730' : '',
       })} to="/Quiz" className=" hover:text-Primary-color transition ease-in-out duration-400 font-semibold"> Quiz</NavLink>
-
-      <NavLink style={({ isActive }) => ({
-        color: isActive ? '#f36730' : '',
-      })} to="/AdminCreate" className=" hover:text-Primary-color transition ease-in-out duration-400 font-semibold"> Create admin</NavLink>
-
-<NavLink style={({ isActive }) => ({
-        color: isActive ? '#f36730' : '',
-      })} to="/StudentCreate" className=" hover:text-Primary-color transition ease-in-out duration-400 font-semibold"> Create Student</NavLink>
-
-<NavLink style={({ isActive }) => ({
-        color: isActive ? '#f36730' : '',
-      })} to="/TeacherCreate" className=" hover:text-Primary-color transition ease-in-out duration-400 font-semibold"> Create Teacher</NavLink>
+ 
 
 <NavLink style={({ isActive }) => ({
         color: isActive ? '#f36730' : '',

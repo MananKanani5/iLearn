@@ -1,15 +1,28 @@
-import React, { Component } from "react";
+import { data } from 'autoprefixer';
+import React, {useState} from 'react'
+import { useNavigate } from "react-router-dom";
 
-export class Login extends Component {
-  state = {
+const Login = () => {
+
+  const navigate = useNavigate();
+  const [data, setData] = useState({
     username: "",
-    password: "",
-  };
-  setValue = (fieldName) => (evt) =>
-    this.setState({ [fieldName]: evt.target.value });
-  render() {
-    
+    password: ""
+  });
+  const setValue = (fieldName) => (evt) =>
+    setData({ [fieldName]: evt.target.value });
+    const setUn =  (evt) =>
+    {
+      setData({username: evt.target.value, password:data.password })
+    }
+    const setPw = (evt) =>
+    {
+      setData({username: data.username, password:evt.target.value })
+    }
+    const { username, password } = data;
     const handleSubmit = async (e) => {
+      e.preventDefault();
+      //console.log("clicked")
       let edp="";
       if(username.substring(0,3)==="STU")
       {
@@ -28,7 +41,7 @@ export class Login extends Component {
         edp="Invalid";
       }
       console.log(edp)
-      e.preventDefault();
+      
       console.log("Submit Clicked")
       //TODO API
       const response = await fetch(`http://localhost:5000/api/${edp}/Login`,{
@@ -36,26 +49,28 @@ export class Login extends Component {
         headers:{
           'Content-Type' : 'application/json'
         },
-        body: JSON.stringify({UserName:this.state.username,Password:this.state.password})
+        body: JSON.stringify({UserName:data.username,Password:data.password})
       });
+      
       const json=await response.json();
       console.log(json);
       if(json.success)
       {
         console.log("You are in");
         console.log("Role="+json.role);
+        localStorage.removeItem('role');
         localStorage.setItem('role',json.role);
-        //TODO redirect to logged in main page
+        navigate('/About')
       }
       else{
         console.log('You are not in: '+json.error);
         //TODO show respective error
       }
     };
-    const { username, password } = this.state;
-    return (
-      <>
-        <div className=" px-8 py-12  bg-gray-100  ">
+  
+  return (
+    <>
+    <div className=" px-8 py-12  bg-gray-100  ">
           <form className="bg-white shadow-md rounded-2xl px-8 pt-6 pb-8 mb-4 max-w-md mx-auto sm:max-w-xl" onSubmit={handleSubmit}>
             <h1 className="text-2xl font-bold uppercase text-center mb-14 mt-2">
               Login Here
@@ -71,7 +86,7 @@ export class Login extends Component {
               <input
                 className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
                 id="username"
-                onChange={this.setValue("username")}
+                onChange={setUn}
                 value={username}
                 type="text"
                 placeholder="Username"
@@ -92,7 +107,7 @@ export class Login extends Component {
                 className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
                 type="password"
                 id="password"
-                onChange={this.setValue("password")}
+                onChange={setPw}
                 value={password}
                 placeholder="Enter Password"
                 name="password"
@@ -127,9 +142,8 @@ export class Login extends Component {
         <p className="text-center text-indigo-500 text-xs">
         </p> */}
         </div>
-      </>
-    );
-  }
+    </>
+  )
 }
 
-export default Login;
+export default Login

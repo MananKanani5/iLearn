@@ -42,6 +42,8 @@ class StudentCreate extends React.Component {
           "Parant_Phone": paranttel,
           "Address": add,
           "Role": "student",
+          "Dept" : "IT",
+          "Class" : "BSCIT",
           "UserName": username,
           "Password": password
         })
