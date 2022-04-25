@@ -2,7 +2,7 @@ import { data } from 'autoprefixer';
 import React, {useState} from 'react'
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Login = (props) => {
 
   const navigate = useNavigate();
   const [data, setData] = useState({
@@ -67,6 +67,7 @@ const Login = () => {
         localStorage.removeItem('name');
         localStorage.setItem('role',json.role);
         localStorage.setItem('name',json.name);
+        props.updateName();
         navigate('/About')
       }
       else{

@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy,useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Regular Import
@@ -34,12 +34,19 @@ import Accordion from "./Components/Accordion"
 // const TeacherCreate = lazy(() => import('./routes/TeacherCreate'));
 // const AssignmentDetails = lazy(() => import('./routes/AssignmentDetails'));
 
+
+
 function App() {
+  const [name, setName] = useState(localStorage.getItem('name'));
+const updateName = () => {
+  console.log("UpdateName called")
+  setName(localStorage.getItem('name'))
+}
   return (
     <>       
       <Router> 
       {/* <Suspense fallback={<div></div>}> */}
-      <Navbar />
+      <Navbar name={name}/>
         <Routes>
           <Route path='/'  element={<Home />} />
           <Route path='/About' element={<About />} />
@@ -53,7 +60,7 @@ function App() {
           <Route path='/StudentCreate' element={<StudentCreate />} />
           <Route path='/TeacherCreate' element={<TeacherCreate />} />
 
-          <Route path="/Login" element={<Login />} />
+          <Route path="/Login" element={<Login updateName={updateName}/>} />
         </Routes>
         {/* </Suspense> */}
       </Router>
