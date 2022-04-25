@@ -1,8 +1,7 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
 
-
-const TeacherRole = () => {
+export const Admin = () => {
   return (
     <>
       <NavLink style={({ isActive }) => ({
@@ -36,5 +35,3 @@ const TeacherRole = () => {
     </>
   )
 }
-
-export default TeacherRole

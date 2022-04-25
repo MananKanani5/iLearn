@@ -3,6 +3,8 @@ import logo from "../img/logo.png";
 import StudentRole from "./OptionsList/StudentRole";
 import TeacherRole from "./OptionsList/TeacherRole";
 import { NavLink } from "react-router-dom";
+import { General } from "./OptionsList/General";
+import { Admin } from "./OptionsList/Admin";
 // import {Fragment, PureComponent } from 'react';
 const renderSwitch = (param) => {
   switch (param) {
@@ -10,8 +12,10 @@ const renderSwitch = (param) => {
       return <TeacherRole />;
     case "student":
       return <StudentRole />;
+    case "admin":
+      return <Admin />;
     default:
-      return "None";
+      return <General />;
   }
 };
 
@@ -38,7 +42,7 @@ const Navbar = (props) => {
             </div>
           </div>
           <div className="md-options w-full hidden md:flex flex-row space-x-7">
-            {renderSwitch("teacher")}
+            {renderSwitch(localStorage.getItem('role'))}
           </div>
 
           <div className="navigation relative inline-block">
@@ -58,7 +62,7 @@ const Navbar = (props) => {
         </div>
         <div className="sm-options bg-hover-secondary">
           <div className={`py-5 px-2 options md:hidden ${menu}  flex flex-col justify-center items-center  space-y-4`}>
-            {renderSwitch("teacher")}
+            {renderSwitch(localStorage.getItem('role'))}
           </div>
         </div>
       </div>

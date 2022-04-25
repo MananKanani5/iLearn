@@ -26,6 +26,7 @@ export class Login extends Component {
       {
         console.log("You are in");
         console.log("Role="+json.role);
+        localStorage.setItem('role',json.role);
         //TODO redirect to logged in main page
       }
       else{
@@ -78,6 +79,7 @@ export class Login extends Component {
                 placeholder="Enter Password"
                 name="password"
                 autoComplete="current-password"
+
                 required
               />
               <p className="text-Primary-color float-right p-2 cursor-pointer hover:text-hover-primary">

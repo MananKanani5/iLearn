@@ -8,7 +8,7 @@ const Accordion = () => {
   return (
     <main>
       <div className='bg-white'>
-        <h3>questions and answers about login</h3>
+        <h3 className='mb-10 text-2xl font-bold uppercase text-center leading-normal'>Course Content</h3>
         <section className='info'>
           {questions.map((question) => (
             <SingleQuestion key={question.id} {...question} />
