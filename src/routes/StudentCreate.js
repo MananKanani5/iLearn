@@ -55,8 +55,13 @@ class StudentCreate extends React.Component {
         //TODO redirect to logged in main page
       }
       else {
-        console.log('Cannot Register: ' + json.error);
-        //TODO show respective error
+        console.log('Cannot Register1: ' + json.error);
+        if(json.error=='Sorry a user with this email already exists')
+        {
+          console.log("in if");
+          var element = document.getElementById("email");
+          element.classList.add("mystyle");
+        }
       }
     }
 

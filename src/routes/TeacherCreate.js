@@ -50,7 +50,12 @@ class TeacherCreate extends React.Component {
       }
       else{
         console.log('Cannot Register: '+json.error);
-        //TODO show respective error
+        if(json.error=='Sorry a user with this email already exists')
+        {
+          console.log("in if");
+          var element = document.getElementById("email");
+          element.classList.add("mystyle");
+        }
       }
     }
 
