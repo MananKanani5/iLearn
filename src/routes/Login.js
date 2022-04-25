@@ -97,6 +97,7 @@ export class Login extends Component {
                 placeholder="Enter Password"
                 name="password"
                 autoComplete="current-password"
+
                 required
               />
               <p className="text-Primary-color float-right p-2 cursor-pointer hover:text-hover-primary">

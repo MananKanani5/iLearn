@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import bg from '../img/home/bg.png';
 
+
 class Home extends React.Component {
 
 

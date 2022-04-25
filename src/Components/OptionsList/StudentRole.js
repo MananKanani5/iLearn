@@ -7,9 +7,9 @@ const StudentRole = () => {
       <NavLink  style={({ isActive }) => ({
           color: isActive ? '#f36730' : '',
         })} to={""} className="hover:text-Primary-color transition ease-in-out duration-400 font-semibold">Assignments</NavLink>
-      <NavLink  style={({ isActive }) => ({
+      {/* <NavLink  style={({ isActive }) => ({
           color: isActive ? '#f36730' : '',
-        })} to={""} className="hover:text-Primary-color transition ease-in-out duration-400 font-semibold">Attendance</NavLink>
+        })} to={""} className="hover:text-Primary-color transition ease-in-out duration-400 font-semibold">Attendance</NavLink> */}
       <NavLink  style={({ isActive }) => ({
           color: isActive ? '#f36730' : '',
         })} to={""} className="hover:text-Primary-color transition ease-in-out duration-400 font-semibold">Forum</NavLink>

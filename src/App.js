@@ -3,7 +3,6 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Regular Import
-
 import Navbar from './Components/Navbar';
 import Home from './routes/Home';
 import About from './routes/About';
@@ -17,6 +16,8 @@ import StudentCreate from './routes/StudentCreate';
 import TeacherCreate from './routes/TeacherCreate';
 import AssignmentDetails from './routes/AssignmentDetails';
 import Footer from './Components/Footer';
+import LecStruct from "./routes/LecStruct";
+import Accordion from "./Components/Accordion"
 
 // lazy loading components, routes import
 
@@ -47,9 +48,11 @@ function App() {
           <Route path='/Attendance' element={<Attendance/>} />
           <Route path="/Notice" element={<Notice  />} />
           <Route path="/Quiz" element={<Quiz  />} />
+          <Route path="/LecStruct" element={<LecStruct />} />
           <Route path='/AdminCreate' element={<AdminCreate/>} />
           <Route path='/StudentCreate' element={<StudentCreate />} />
           <Route path='/TeacherCreate' element={<TeacherCreate />} />
+
           <Route path="/Login" element={<Login />} />
         </Routes>
         {/* </Suspense> */}
