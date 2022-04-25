@@ -58,7 +58,7 @@ const Navbar = (props) => {
         </div>
         <div className="sm-options bg-hover-secondary">
           <div className={`py-5 px-2 options md:hidden ${menu}  flex flex-col justify-center items-center  space-y-4`}>
-            {renderSwitch("teacher")}
+            {renderSwitch(localStorage.getItem('role'))}
           </div>
         </div>
       </div>

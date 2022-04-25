@@ -17,7 +17,9 @@ class TeacherCreate extends React.Component {
   render() {
 
     const { firstName, lastName, email, tel, alttel, add, password, confirmpass } = this.state;
-
+    let username="";
+    let i=email.indexOf("@");
+    username=email.substring(0,i);
     const handleSubmit = async (e) => {
       e.preventDefault();
       console.log("Registration Submit Clicked");
@@ -27,7 +29,6 @@ class TeacherCreate extends React.Component {
           'Content-Type' : 'application/json'
         },
         body: JSON.stringify({
-          "Uid" :"abscewr",
           "Fname":firstName,
           "Lname":lastName,
           "Email":email,
@@ -35,7 +36,8 @@ class TeacherCreate extends React.Component {
           "Alternate_Phone":alttel,
           "Address":add,
           "Role":"teacher",
-          "UserName":"Gaurav4yadavy3590",
+          "Dept":"IT",
+          "UserName":username,
           "Password":password
         })
       });

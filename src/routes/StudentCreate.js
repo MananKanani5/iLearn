@@ -21,7 +21,9 @@ class StudentCreate extends React.Component {
   render() {
 
     const { firstName, lastName, email, tel, alttel, parentemail, paranttel, add, dept, password, confirmpass } = this.state;
-
+    let username="";
+    let i=email.indexOf("@");
+    username=email.substring(0,i);
     const handleSubmit = async (e) => {
       e.preventDefault();
       console.log("Registration Submit Clicked");
@@ -31,7 +33,6 @@ class StudentCreate extends React.Component {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          "Uid": "abscewr",
           "Fname": firstName,
           "Lname": lastName,
           "Email": email,
@@ -41,7 +42,7 @@ class StudentCreate extends React.Component {
           "Parant_Phone": paranttel,
           "Address": add,
           "Role": "student",
-          "UserName": "Gaurav4yadavy3590",
+          "UserName": username,
           "Password": password
         })
       });

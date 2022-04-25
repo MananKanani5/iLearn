@@ -10,10 +10,28 @@ export class Login extends Component {
   render() {
     
     const handleSubmit = async (e) => {
+      let edp="";
+      if(username.substring(0,3)==="STU")
+      {
+        edp="Student";
+      }
+      else if(username.substring(0,3)==="TCH")
+      {
+        edp="Teacher";
+      }
+      else if(username.substring(0,3)==="ADM")
+      {
+        edp="Admin";
+      }
+      else 
+      {
+        edp="Invalid";
+      }
+      console.log(edp)
       e.preventDefault();
       console.log("Submit Clicked")
       //TODO API
-      const response = await fetch("http://localhost:5000/api/Student/Login",{
+      const response = await fetch(`http://localhost:5000/api/${edp}/Login`,{
         method:"POST",
         headers:{
           'Content-Type' : 'application/json'
@@ -26,6 +44,7 @@ export class Login extends Component {
       {
         console.log("You are in");
         console.log("Role="+json.role);
+        localStorage.setItem('role',json.role);
         //TODO redirect to logged in main page
       }
       else{
