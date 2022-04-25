@@ -13,10 +13,15 @@ const Login = () => {
     setData({ [fieldName]: evt.target.value });
     const setUn =  (evt) =>
     {
+      document.getElementById('msg2').innerHTML="";
+      document.getElementById('username').classList.remove("mystyle");
       setData({username: evt.target.value, password:data.password })
+
     }
     const setPw = (evt) =>
     {
+      document.getElementById('msg').innerHTML="";
+      document.getElementById('password').classList.remove("mystyle");
       setData({username: data.username, password:evt.target.value })
     }
     const { username, password } = data;
@@ -59,12 +64,23 @@ const Login = () => {
         console.log("You are in");
         console.log("Role="+json.role);
         localStorage.removeItem('role');
+        localStorage.removeItem('name');
         localStorage.setItem('role',json.role);
+        localStorage.setItem('name',json.name);
         navigate('/About')
       }
       else{
         console.log('You are not in: '+json.error);
-        //TODO show respective error
+        if(json.error=="Please try to login with correct Password")
+        {
+          document.getElementById('msg').innerHTML="Invalid Password";
+          document.getElementById('password').classList.add("mystyle");
+        }
+        if(json.error=="invalid credentials")
+        {
+          document.getElementById('msg2').innerHTML="Invalid Username";
+          document.getElementById('username').classList.add("mystyle");
+        }
       }
     };
   
@@ -92,8 +108,13 @@ const Login = () => {
                 placeholder="Username"
                 name="username"
                 autoComplete="username"
+                pattern='^(STU|ADM|TCH)\d{4}$'
+                title="Invalid Username"
                 required
               />
+              <p id='msg2' className="text-Primary-color float-right p-2 cursor-pointer hover:text-hover-primary">
+                  
+                  </p>
             </div>
 
             <div className="m-4">
@@ -115,7 +136,10 @@ const Login = () => {
 
                 required
               />
-              <p className="text-Primary-color float-right p-2 cursor-pointer hover:text-hover-primary">
+              <p id='msg' className="text-Primary-color float-right p-2 cursor-pointer hover:text-hover-primary">
+                  
+              </p>
+              <p className="text-Primary-color float-left p-2 cursor-pointer hover:text-hover-primary">
                   Password Forget?
               </p>
             </div>

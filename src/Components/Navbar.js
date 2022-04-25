@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import logo from "../img/logo.png";
 import StudentRole from "./OptionsList/StudentRole";
 import TeacherRole from "./OptionsList/TeacherRole";
@@ -19,11 +19,18 @@ const renderSwitch = (param) => {
   }
 };
 
+
 const Navbar = (props) => {
   const [menu, setMenu] = useState("hidden");
+  const [name, setName] = useState(localStorage.getItem('name'));
   const showMenu = () => {
     menu === "hidden" ? setMenu("block") : setMenu("hidden");
   };
+
+  useEffect(() => {
+    console.log("UseEffect")
+      setName(localStorage.getItem('name'))
+}, [5])
   return (
     <>
       <div className="bg-Secondary-color text-white top-0 w-full sticky z-10">
@@ -48,13 +55,13 @@ const Navbar = (props) => {
           <div className="navigation relative inline-block">
             <NavLink to={"/Login"} className="block profile bg-Primary-color hover:bg-hover-primary transition ease-in-out duration-400 px-6 py-4 h-auto w-auto rounded-full hover:shadow-lg cursor-pointer">
               <i className="fa fa-user-alt flex items-center"> 
-                <span className="font-sans font-semibold ml-2 max-sm:hidden"> Login </span>
+                <span className="font-sans font-semibold ml-2 max-sm:hidden"> {name} </span>
                 <i className="fa fa-angle-down ml-2"></i>
                 </i> 
             </NavLink>
             <div className="navigation-content shadow-lg border rounded-md absolute right-3 hidden z-10 min-w-[160px] bg-white">
               <NavLink to={"/Dashboard"} className="block p-3 hover:bg-slate-100 font-semibold text-black hover:text-hover-primary hover:rounded-md">Dashboard</NavLink>
-              <NavLink to={"/EditAc"} className="block p-3 hover:bg-slate-100 font-semibold text-black hover:text-hover-primary hover:rounded-md">Edit Account</NavLink>
+              
               <NavLink to={"/Logout"} className="block p-3 hover:bg-slate-100 font-semibold text-black hover:text-hover-primary hover:rounded-md">Logout</NavLink>
             </div>
           </div>

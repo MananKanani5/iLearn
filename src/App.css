@@ -17,6 +17,9 @@
     
   }
 }
+.mystyle{
+  border: #ff0000 2px solid;
+}
 option:hover{
   background-color:var(--Primary);
 }

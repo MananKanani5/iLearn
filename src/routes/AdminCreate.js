@@ -10,9 +10,12 @@ class AdminCreate extends React.Component {
     password: "",
     confirmpass: ""
   };
-
-  setValue = (fieldName) => (evt) =>
-    this.setState({ [fieldName]: evt.target.value });
+  
+  setValue = (fieldName) => (evt) =>{
+    this.setState({ [fieldName]: evt.target.value }); 
+    var element = document.getElementById("email");
+    element.classList.remove("mystyle");
+  }
 
   render() {
 
@@ -22,6 +25,18 @@ class AdminCreate extends React.Component {
     username=email.substring(0,i);
     const handleSubmit = async (e) => {
       e.preventDefault();
+
+      if(this.state.password !== this.state.confirmpass){
+        console.log("The passwords doesn't match")
+        return false; // The form won't submit
+    }
+    else
+    {
+      console.log("Password Match")
+      // return true; // The form will submit
+    } 
+
+      
       console.log("Registration Submit Clicked");
       const response = await fetch("http://localhost:5000/api/Admin/Register", {
         method: "POST",
@@ -48,7 +63,12 @@ class AdminCreate extends React.Component {
       }
       else {
         console.log('Cannot Register: ' + json.error);
-        //TODO show respective error
+        if(json.error=='Sorry a user with this email already exists')
+        {
+          console.log("in if");
+          var element = document.getElementById("email");
+          element.classList.add("mystyle");
+        }
       }
     }
 
@@ -59,7 +79,6 @@ class AdminCreate extends React.Component {
           <h1 className="text-2xl font-bold uppercase text-center mb-14 mt-2" >
             Create New Admin
           </h1>
-
 
           <div className="flex flex-wrap name justify-between">
             <div className="m-4">
@@ -94,9 +113,6 @@ class AdminCreate extends React.Component {
           </div>
 
 
-
-
-
           <div className="m-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
@@ -113,8 +129,6 @@ class AdminCreate extends React.Component {
               type="email" placeholder="Your Email" required
             />
           </div>
-
-
 
           <div className="flex flex-wrap tel justify-between">
             <div className="m-4">
