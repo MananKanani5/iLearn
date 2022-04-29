@@ -17,6 +17,18 @@
     
   }
 }
+.startQuizBtn{
+  background-color: var(--Primary) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    padding-left: 1.75rem !important;
+    padding-right: 1.75rem !important;
+    border-radius: 9999px !important;
+    margin-top: 30px;
+
+}
 .mystyle{
   border: #ff0000 2px solid;
 }
