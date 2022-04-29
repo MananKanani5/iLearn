@@ -20,13 +20,13 @@ class Home extends React.Component {
             <h1 className=" font-bold uppercase mb-5 text-Secondary-color max-sm:text-[28px] max-md:text-[40px]">Learners College</h1>
             <p className="mb-12 max-sm:text-center max-sm:mb-10">Learners College of Arts and Commerce is one of the best colleges in the Mumbai.</p> 
             <button className="">
-            <NavLink to={"."}
+            <NavLink to={"/Login"}
               className="border-2 border-Primary-color  bg-Primary-color hover:bg-hover-primary transition ease-in-out duration-400 px-7 py-4 h-auto w-auto rounded-full cursor-pointer hover:shadow-lg text-white font-semibold shadow-2xl shadow-[#f36730] mr-3">
               Students
             </NavLink>
             </button>
             <button>
-            <NavLink to={"."}
+            <NavLink to={"/login"}
               className="border-2 border-Primary-color transition-all ease-in-out duration-400 px-7 py-4 h-auto w-auto rounded-full cursor-pointer hover:bg-hover-primary hover:text-white text-Primary-color font-semibold">
               Teachers
             </NavLink>

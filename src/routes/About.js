@@ -3,7 +3,7 @@ const about = () => {
 
   return (
       <div>
-        Manan kanani
+        About Goes Here
       </div>
   )
 }
