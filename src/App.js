@@ -7,7 +7,6 @@ import Navbar from './Components/Navbar';
 import Home from './routes/Home';
 import About from './routes/About';
 import AdminCreate from './routes/AdminCreate';
-import Attendance from './routes/Attendance';
 import Assignment from './routes/Assignment';
 import Notice from './routes/Notice';
 import Quizz from './routes/Quiz/Quizz';
@@ -18,23 +17,9 @@ import AssignmentDetails from './routes/AssignmentDetails';
 import Footer from './Components/Footer';
 import LecStruct from "./routes/LecStruct";
 import CreateQuiz from "./routes/Quiz/CreateQuiz";
-import QuizForm from "./routes/Quiz/QuizForm";
 
 // lazy loading components, routes import
 // const Navbar = React.lazy(() => import('./Components/Navbar'));
-// const AdminCreate = lazy(() => import('./routes/AdminCreate'));
-// const Attendance = lazy(()=>import('./routes/Attendance'));
-// const About = lazy(() => import('./routes/About'));
-// const Home = lazy(() => import('./routes/Home'));
-// const Assignment = lazy(() => import('./routes/Assignment'));
-// const Notice = lazy(() => import('./routes/Notice'));
-// const Quiz = lazy(() => import('./routes/Quiz'));
-// const Login = lazy(() => import('./routes/Login'));
-// const StudentCreate = lazy(() => import('./routes/StudentCreate'));
-// const TeacherCreate = lazy(() => import('./routes/TeacherCreate'));
-// const AssignmentDetails = lazy(() => import('./routes/AssignmentDetails'));
-
-
 
 function App() {
   const [name, setName] = useState(localStorage.getItem('name'));
@@ -52,7 +37,6 @@ const updateName = () => {
           <Route path='/About' element={<About />} />
           <Route path='/Assignment' element={<Assignment />} exact />
           <Route path='/AssignmentDetails' element={<AssignmentDetails />} />
-          <Route path='/Attendance' element={<Attendance/>} />
           <Route path="/Notice" element={<Notice  />} />
           <Route path="/Quizz" element={<Quizz />} />
           <Route path="/CreateQuiz" element={<CreateQuiz />} />
@@ -60,7 +44,6 @@ const updateName = () => {
           <Route path='/AdminCreate' element={<AdminCreate/>} />
           <Route path='/StudentCreate' element={<StudentCreate />} />
           <Route path='/TeacherCreate' element={<TeacherCreate />} />
-
           <Route path="/Login" element={<Login updateName={updateName}/>} />
         </Routes>
         {/* </Suspense> */}

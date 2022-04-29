@@ -1,12 +1,12 @@
 export const quizData =  {
     "quizTitle": "iLearn Quiz 1",
     "quizSynopsis": "This Quiz contain Single choice questions, Multiple choice questions, ",
-    "nrOfQuestions": "12",
+    "nrOfQuestions": "5",
     "questions": [
       {
         "question": "How can you access the state of a component from inside of a member function?",
         "questionType": "text",
-        "questionPic": "https://dummyimage.com/600x400/000/fff&text=X", // if you need to display Picture in Question
+        // "questionPic": "https://dummyimage.com/600x400/000/fff&text=X", (if wants to display picture in question)
         "answerSelectionType": "single",
         "answers": [
           "this.getState()",
@@ -17,8 +17,7 @@ export const quizData =  {
         "correctAnswer": "3",
         "messageForCorrectAnswer": "Correct answer. Good job.",
         "messageForIncorrectAnswer": "Incorrect answer. Please try again.",
-        "explanation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "point": "20"
+        "point": "2"
       },
       {
         "question": "ReactJS is developed by _____?",
@@ -31,8 +30,7 @@ export const quizData =  {
         "correctAnswer": "2",
         "messageForCorrectAnswer": "Correct answer. Good job.",
         "messageForIncorrectAnswer": "Incorrect answer. Please try again.",
-        "explanation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "point": "20"
+        "point": "2"
       },
       {
         "question": "ReactJS is an MVC based framework?",
@@ -45,8 +43,7 @@ export const quizData =  {
         "correctAnswer": "2",
         "messageForCorrectAnswer": "Correct answer. Good job.",
         "messageForIncorrectAnswer": "Incorrect answer. Please try again.",
-        "explanation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "point": "10"
+        "point": "2"
       },
       {
         "question": "Which of the following concepts is/are key to ReactJS?",
@@ -60,25 +57,23 @@ export const quizData =  {
         "correctAnswer": "3",
         "messageForCorrectAnswer": "Correct answer. Good job.",
         "messageForIncorrectAnswer": "Incorrect answer. Please try again.",
-        "explanation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "point": "30"
+        "point": "2"
       },
-      {
-        "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
-        "questionType": "photo",
-        "answerSelectionType": "single",
-        "answers": [
-          "https://dummyimage.com/600x400/000/fff&text=A",
-          "https://dummyimage.com/600x400/000/fff&text=B",
-          "https://dummyimage.com/600x400/000/fff&text=C",
-          "https://dummyimage.com/600x400/000/fff&text=D"
-        ],
-        "correctAnswer": "1",
-        "messageForCorrectAnswer": "Correct answer. Good job.",
-        "messageForIncorrectAnswer": "Incorrect answer. Please try again.",
-        "explanation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "point": "20"
-      },
+      // {
+      //   "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
+      //   "questionType": "photo",
+      //   "answerSelectionType": "single",
+      //   "answers": [
+      //     "https://dummyimage.com/600x400/000/fff&text=A",
+      //     "https://dummyimage.com/600x400/000/fff&text=B",
+      //     "https://dummyimage.com/600x400/000/fff&text=C",
+      //     "https://dummyimage.com/600x400/000/fff&text=D"
+      //   ],
+      //   "correctAnswer": "1",
+      //   "messageForCorrectAnswer": "Correct answer. Good job.",
+      //   "messageForIncorrectAnswer": "Incorrect answer. Please try again.",
+      //   "point": "2"
+      // },
       {
         "question": "What are the advantages of React JS?",
         "questionType": "text",
@@ -93,7 +88,7 @@ export const quizData =  {
         "messageForCorrectAnswer": "Correct answer. Good job.",
         "messageForIncorrectAnswer": "Incorrect answer. Please try again.",
         "explanation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "point": "20"
+        "point": "2"
       },
      
     ]
