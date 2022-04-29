@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Quiz from 'react-quiz-component';
-import { quiz } from './quiz';
+import { quizData } from './quizData';
 
 export class Quizz extends Component {
   render() {
@@ -11,7 +11,7 @@ export class Quizz extends Component {
     return (
       <div className=' bg-[#fff7f2] text-center flex justify-center '>
         <div className='p-16 bg-white m-10 rounded-2xl shadow-md'>
-          <Quiz quiz={quiz} onComplete={setQuizResult} showDefaultResult={false} />
+          <Quiz quiz={quizData} onComplete={setQuizResult} showDefaultResult={false} />
         </div>
       </div>
     )

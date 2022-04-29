@@ -1,7 +1,6 @@
 import "./App.css";
 import React, { Suspense, lazy,useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import PrivateRoute from './PrivateRoute';
 
 // Regular Import
 import Navbar from './Components/Navbar';
@@ -18,7 +17,8 @@ import TeacherCreate from './routes/TeacherCreate';
 import AssignmentDetails from './routes/AssignmentDetails';
 import Footer from './Components/Footer';
 import LecStruct from "./routes/LecStruct";
-import Accordion from "./Components/Accordion"
+import CreateQuiz from "./routes/Quiz/CreateQuiz";
+import QuizForm from "./routes/Quiz/QuizForm";
 
 // lazy loading components, routes import
 // const Navbar = React.lazy(() => import('./Components/Navbar'));
@@ -54,7 +54,8 @@ const updateName = () => {
           <Route path='/AssignmentDetails' element={<AssignmentDetails />} />
           <Route path='/Attendance' element={<Attendance/>} />
           <Route path="/Notice" element={<Notice  />} />
-          <Route path="/Quizz" element={<Quizz  />} />
+          <Route path="/Quizz" element={<Quizz />} />
+          <Route path="/CreateQuiz" element={<CreateQuiz />} />
           <Route path="/LecStruct" element={<LecStruct />} />
           <Route path='/AdminCreate' element={<AdminCreate/>} />
           <Route path='/StudentCreate' element={<StudentCreate />} />

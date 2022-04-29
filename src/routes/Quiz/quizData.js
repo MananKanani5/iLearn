@@ -1,4 +1,4 @@
-export const quiz =  {
+export const quizData =  {
     "quizTitle": "iLearn Quiz 1",
     "quizSynopsis": "This Quiz contain Single choice questions, Multiple choice questions, ",
     "nrOfQuestions": "12",
