@@ -65,9 +65,30 @@ const ForgetPass = (props) => {
     }
   };
 
+  let edp="";
   const handleSubmit = async (e) => {
+
+    
+      if(uid.substring(0,3)==="STU")
+      {
+        edp="Student";
+      }
+      else if(uid.substring(0,3)==="TCH")
+      {
+        edp="Teacher";
+      }
+      else if(uid.substring(0,3)==="ADM")
+      {
+        edp="Admin";
+      }
+      else 
+      {
+        edp="Invalid";
+      }
+      console.log(edp)
+
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/student/getemail", {
+    const response = await fetch(`http://localhost:5000/api/${edp}/getemail`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -97,12 +118,30 @@ const ForgetPass = (props) => {
   ///updatepass
   const handleSubmit2 = async (e) => {
     e.preventDefault();
+
+    if(uid.substring(0,3)==="STU")
+    {
+      edp="Student";
+    }
+    else if(uid.substring(0,3)==="TCH")
+    {
+      edp="Teacher";
+    }
+    else if(uid.substring(0,3)==="ADM")
+    {
+      edp="Admin";
+    }
+    else 
+    {
+      edp="Invalid";
+    }
+    console.log(edp)
     console.log(b1 + "\t" + b2);
     if (b1 & b2) {
       console.log("Submit 2 clickec");
       //TODO API
       const response = await fetch(
-        "http://localhost:5000/api/student/updatepass",
+        `http://localhost:5000/api/${edp}/updatepass`,
         {
           method: "PUT",
           headers: {
