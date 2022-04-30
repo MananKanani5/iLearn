@@ -1,6 +1,6 @@
 import { data } from 'autoprefixer';
 import React, {useState} from 'react'
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Login = (props) => {
 
@@ -143,9 +143,9 @@ const Login = (props) => {
               <p id='msg' className="text-Primary-color float-right p-2 cursor-pointer hover:text-hover-primary">
                   
               </p>
-              <p className="text-Primary-color float-left p-2 cursor-pointer hover:text-hover-primary">
+              <NavLink to={"/Forgetpass"} className="text-Primary-color float-left p-2 cursor-pointer hover:text-hover-primary">
                   Password Forget?
-              </p>
+              </NavLink>
             </div>
 
             <div className="m-4 mt-16">
