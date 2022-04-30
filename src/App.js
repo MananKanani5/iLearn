@@ -17,6 +17,7 @@ import AssignmentDetails from './routes/AssignmentDetails';
 import Footer from './Components/Footer';
 import LecStruct from "./routes/LecStruct";
 import CreateQuiz from "./routes/Quiz/CreateQuiz";
+import ForgetPass from "./routes/ForgetPass";
 
 // lazy loading components, routes import
 // const Navbar = React.lazy(() => import('./Components/Navbar'));
@@ -45,6 +46,8 @@ const updateName = () => {
           <Route path='/StudentCreate' element={<StudentCreate />} />
           <Route path='/TeacherCreate' element={<TeacherCreate />} />
           <Route path="/Login" element={<Login updateName={updateName}/>} />
+          <Route path="/ForgetPass" element={<ForgetPass /> } />
+
         </Routes>
         {/* </Suspense> */}
       </Router>
