@@ -15,8 +15,27 @@ class StudentCreate extends React.Component {
     confirmpass: ""
   };
 
-  setValue = (fieldName) => (evt) =>
+  setDefaultState = () => {
+    this.setState({
+      firstName: "",
+    lastName: "",
+    email: "",
+    tel: "",
+    alttel: "",
+    parentemail: "",
+    paranttel: "",
+    add: "",
+    dept: "",
+    password: "",
+    confirmpass: ""
+    })
+  }
+
+  setValue = (fieldName) => (evt) => {
     this.setState({ [fieldName]: evt.target.value });
+    var element = document.getElementById("email");
+    element.classList.remove("mystyle");
+  }
 
   render() {
 
@@ -53,6 +72,10 @@ class StudentCreate extends React.Component {
       if (json.success) {
         console.log("Registered");
         //TODO redirect to logged in main page
+        alert('Student Created ');
+            // window.location = '/some/url';
+            this.setDefaultState();
+            console.log("Cleared");
       }
       else {
         console.log('Cannot Register1: ' + json.error);

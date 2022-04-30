@@ -48,11 +48,12 @@ const Login = (props) => {
       console.log(edp)
       
       console.log("Submit Clicked")
-      //TODO API
-      const response = await fetch(`http://localhost:5000/api/${edp}/Login`,{
+      //TODO API  http://localhost:5000
+      const response = await fetch(`https://ilearn-backend-lms.herokuapp.com/api/${edp}/Login`,{
         method:"POST",
         headers:{
-          'Content-Type' : 'application/json'
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify({UserName:data.username,Password:data.password})
       });
@@ -67,7 +68,9 @@ const Login = (props) => {
         localStorage.removeItem('name');
         localStorage.setItem('role',json.role);
         localStorage.setItem('name',json.name);
+        localStorage.setItem('status','true');
         props.updateName();
+        props.updateStatus();
         navigate('/About')
       }
       else{

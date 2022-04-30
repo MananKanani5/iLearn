@@ -24,15 +24,20 @@ import ForgetPass from "./routes/ForgetPass";
 
 function App() {
   const [name, setName] = useState(localStorage.getItem('name'));
+  const [status, setStatus] = useState(localStorage.getItem('status'));
 const updateName = () => {
   console.log("UpdateName called")
   setName(localStorage.getItem('name'))
+}
+const updateStatus = () => {
+  console.log("UpdateStatus called")
+  setStatus(localStorage.getItem('status'))
 }
   return (
     <>       
       <Router>
       {/* <Suspense fallback={<div></div>}> */}
-      <Navbar name={name}/>
+      <Navbar name={name} status={status}/>
         <Routes>
           <Route path='/'  element={<Home />} />
           <Route path='/About' element={<About />} />
@@ -45,7 +50,7 @@ const updateName = () => {
           <Route path='/AdminCreate' element={<AdminCreate/>} />
           <Route path='/StudentCreate' element={<StudentCreate />} />
           <Route path='/TeacherCreate' element={<TeacherCreate />} />
-          <Route path="/Login" element={<Login updateName={updateName}/>} />
+          <Route path="/Login" element={<Login updateName={updateName} updateStatus={updateStatus}/>} />
           <Route path="/ForgetPass" element={<ForgetPass /> } />
 
         </Routes>

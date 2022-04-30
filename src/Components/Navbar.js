@@ -49,7 +49,10 @@ const Navbar = (props) => {
             {renderSwitch(localStorage.getItem('role'))}
           </div>
           {
-          localStorage.getItem('status')=='true' &&
+            console.log(props.status)
+          }
+          {  
+          props.status=='true' &&
           <div className="navigation relative inline-block">
             <NavLink to={"/Login"} className="block profile bg-Primary-color hover:bg-hover-primary transition ease-in-out duration-400 px-6 py-4 h-auto w-auto rounded-full hover:shadow-lg cursor-pointer">
               <i className="fa fa-user-alt flex items-center"> 
