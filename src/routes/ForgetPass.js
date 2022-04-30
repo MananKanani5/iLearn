@@ -1,7 +1,9 @@
 import { data } from "autoprefixer";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 //1min ill type DONE
 const ForgetPass = (props) => {
+  const navigate = useNavigate();
   const [uid, setUid] = useState("");
   const [pass, setPass] = useState("");
   const [cpass, setCpass] = useState("");
@@ -120,6 +122,7 @@ const ForgetPass = (props) => {
         alert("Password Updated Successfully");
       // window.location = '/some/url';
       console.log("updated");
+      navigate('/Login')
       }
       else{
         console.log("Err in Pass Update");

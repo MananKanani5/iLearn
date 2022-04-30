@@ -49,7 +49,7 @@ const Login = (props) => {
       
       console.log("Submit Clicked")
       //TODO API  http://localhost:5000
-      const response = await fetch(`https://ilearn-backend-lms.herokuapp.com/api/${edp}/Login`,{
+      const response = await fetch(`${process.env.REACT_APP_URL}/api/${edp}/Login`,{
         method:"POST",
         headers:{
           'Content-Type': 'application/json',
