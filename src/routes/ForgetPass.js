@@ -84,6 +84,9 @@ const ForgetPass = (props) => {
         {
             console.log("Submit 2 clickec")
             //TODO API
+            alert('message');
+            // window.location = '/some/url';
+            console.log("forwared");
         }
         else {
             document.getElementById('submit2').disabled=true;

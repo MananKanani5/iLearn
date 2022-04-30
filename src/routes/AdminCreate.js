@@ -11,6 +11,18 @@ class AdminCreate extends React.Component {
     confirmpass: ""
   };
   
+  setDefaultState = () => {
+    this.setState({
+      firstName: "",
+    lastName: "",
+    email: "",
+    tel: "",
+    alttel: "",
+    add: "",
+    password: "",
+    confirmpass: ""
+    })
+  }
   setValue = (fieldName) => (evt) =>{
     this.setState({ [fieldName]: evt.target.value }); 
     var element = document.getElementById("email");
@@ -60,6 +72,10 @@ class AdminCreate extends React.Component {
       if (json.success) {
         console.log("Registered");
         //TODO redirect to logged in main page
+        alert('Admin Created ');
+            // window.location = '/some/url';
+            this.setDefaultState();
+            console.log("Cleared");
       }
       else {
         console.log('Cannot Register: ' + json.error);
