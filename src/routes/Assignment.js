@@ -1,99 +1,161 @@
-import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom';
-import assignmentData from './assignmentData';
+import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
+import assignmentData from "./assignmentData";
+import AssignmentSmall from "./Quiz/AssignmentSmall";
 class Assignment extends React.Component {
   state = {
     title: "",
     description: "",
     marks: "",
     subdate: "",
-    attachment: ""
+    attachment: "",
+    data:[]
   };
 
-  setMin = ()=>
+  componentDidMount = async () =>
   {
-    document.getElementById('subdate').min = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0];
-    console.log(new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0]);
-  }
-
-  setValue = (fieldName) => (evt) => {
-    this.setState({ [fieldName]: evt.target.value });
-  }
-
-  render() {
-
-    const { title, description, marks, subdate, attachment } = this.state;
-    
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-      console.log("Registration Submit Clicked");
-      const response = await fetch("http://localhost:5000/api/Assignment/Create", {
+    const response = await fetch("http://localhost:5000/api/Assignment/FetchSpecific", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          "Uid": "abscewr",
-          "Title": title,
-          "Role": "admin",
-          "UserName": "Gaurav4yadavy3590",
-          // "Password":password
+          "tn":localStorage.getItem('name')
         })
       });
       const json = await response.json();
       console.log(json);
-      if (json.success) {
-        console.log("Registered");
+      this.setState({
+        title: this.state.title,
+        description: this.state.description,
+        marks: this.state.marks,
+        subdate: this.state.subdate,
+        attachment: this.state.attachment,
+        data:json.assignment
+      })
+      console.log(this.state.data);
+  }
+
+  componentDidUpdate = async () =>
+  {
+    const response = await fetch("http://localhost:5000/api/Assignment/FetchSpecific", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          "tn":localStorage.getItem('name')
+        })
+      });
+      const json = await response.json();
+      console.log(json);
+      this.setState({
+        title: this.state.title,
+        description: this.state.description,
+        marks: this.state.marks,
+        subdate: this.state.subdate,
+        attachment: this.state.attachment,
+        data:json.assignment
+      })
+      console.log(this.state.data);
+  }
+
+  setDefaultState = () => {
+    this.setState({
+      title: "",
+      description: "",
+      marks: "",
+      subdate: "",
+      attachment: "",
+    });
+  };
+  setMin = () => {
+    document.getElementById("subdate").min = new Date(
+      new Date().getTime() - new Date().getTimezoneOffset() * 60000
+    )
+      .toISOString()
+      .split("T")[0];
+    console.log(
+      new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000)
+        .toISOString()
+        .split("T")[0]
+    );
+  };
+
+  setValue = (fieldName) => (evt) => {
+    this.setState({ [fieldName]: evt.target.value });
+  };
+
+  render() {
+    const { title, description, marks, subdate, attachment } = this.state;
+
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      console.log("Registration Submit Clicked");
+      const response = await fetch(
+        "http://localhost:5000/api/Assignment/Create",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            title: title,
+            content: description,
+            marks: marks,
+            date: subdate,
+            tn: localStorage.getItem("name"),
+          }),
+        }
+      );
+      const json = await response.json();
+      console.log(json);
+      if (json.created) {
+        console.log("Assignment Created");
+        alert("Assignment Created");
+        // window.location = '/some/url';
+        this.setDefaultState();
+        console.log("Cleared");
+        this.componentDidUpdate();
         //TODO redirect to logged in main page
-      }
-      else {
-        console.log('Cannot Register: ' + json.error);
+      } else {
+        console.log("Cannot Create Assignment: " + json.error);
         //TODO show respective error
       }
-    }
+    };
     return (
       <section className="px-8 max-sm:px-5 py-12  bg-[#fff7f2] m-z fade-in flex justify-between flex-wrap">
-        <div className='sm:w-3/5 max-sm:mb-10'>
-
+        <div className="sm:w-3/5 max-sm:mb-10">
           <div className="bg-white shadow-md rounded-2xl px-8 max-sm:px-5 py-7 mb-4 sm:max-w-[95%]">
-            <h1 className="text-2xl font-bold uppercase text-center mb-14 mt-2 leading-normal" >
+            <h1 className="text-2xl font-bold uppercase text-center mb-14 mt-2 leading-normal">
               Assignments
             </h1>
-            <hr className='mb-14 -mt-5' />
+            <hr className="mb-14 -mt-5" />
 
-            <div className='list mt-5 '>
-              <ul className='m-2'>
-              {assignmentData.map((ad) => (
-              <>
-              <li className='my-6'>
-                  <NavLink to={"/AssignmentDetails"} className="hover:text-Primary-color transition ease-in-out duration-400"> <h3>{ad.no}. {ad.title}</h3></NavLink>
-                  <div className='meta text-gray-500 sm:pl-4 max-sm:pt-2 flex flex-wrap'>
-                    <p>Class: {ad.Class}</p>
-                    <p>Created On: {ad.created}</p>
-                    <p>End Date: {ad.end}</p>
-                    <p>Marks: {ad.marks}</p>
-                  </div>
-                </li>
-              </>
-               ))}
-                
+            <div className="list mt-5 ">
+              <ul className="m-2">
+                {this.state.data.map((ad) => ( 
+                  <>
+                    <AssignmentSmall key={ad._id} ad={ad}/>
+                  </>
+                ))}
               </ul>
             </div>
-
           </div>
         </div>
 
-        <div className='sm:w-2/5 w-full'>
+        <div className="sm:w-2/5 w-full">
           <div className="bg-white shadow-md rounded-2xl px-8 max-sm:px-5 py-7">
             <form onSubmit={handleSubmit} autoComplete="on">
-              <h1 className="text-2xl font-bold uppercase text-center mb-14 mt-2" >
+              <h1 className="text-2xl font-bold uppercase text-center mb-14 mt-2">
                 Create New Assignment
               </h1>
 
               <div className="m-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="title">
+                  htmlFor="title"
+                >
                   Title
                 </label>
                 <input
@@ -102,7 +164,9 @@ class Assignment extends React.Component {
                   id="title"
                   onChange={this.setValue("title")}
                   value={title}
-                  placeholder="Assignment Title" required />
+                  placeholder="Assignment Title"
+                  required
+                />
               </div>
 
               <div className="m-4">
@@ -117,14 +181,17 @@ class Assignment extends React.Component {
                   id="description"
                   onChange={this.setValue("description")}
                   value={description}
-                  type="text" placeholder="description" rows={8}
+                  type="text"
+                  placeholder="description"
+                  rows={8}
                 />
               </div>
 
               <div className="m-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="marks">
+                  htmlFor="marks"
+                >
                   Marks
                 </label>
                 <input
@@ -133,13 +200,16 @@ class Assignment extends React.Component {
                   id="marks"
                   onChange={this.setValue("marks")}
                   value={marks}
-                  placeholder="Marks" required />
+                  placeholder="Marks"
+                  required
+                />
               </div>
 
               <div className="m-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="Sub Date">
+                  htmlFor="Sub Date"
+                >
                   Submission Date
                 </label>
                 <input
@@ -148,7 +218,9 @@ class Assignment extends React.Component {
                   onClick={this.setMin}
                   onChange={this.setValue("subdate")}
                   value={subdate}
-                  type="date" placeholder="Submission Date" rows={8}
+                  type="date"
+                  placeholder="Submission Date"
+                  rows={8}
                 />
               </div>
 
@@ -180,16 +252,12 @@ class Assignment extends React.Component {
                   Create
                 </button>
               </div>
-
             </form>
           </div>
-
         </div>
       </section>
     );
-   
   }
-  
 }
 
 export default Assignment;
