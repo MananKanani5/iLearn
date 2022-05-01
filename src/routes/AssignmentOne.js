@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState,useEffect } from "react";
+import SingleSubmission from './Quiz/SingleSubmission';
 export const AssignmentOne = (props) => {
 
 
@@ -20,6 +21,32 @@ export const AssignmentOne = (props) => {
     const showSubm = () => {
         subm === "block" ? setSubm("hidden") : setSubm("block");
     };
+
+    const [sb, setSb] = useState([])
+    useEffect(() => {
+      const getData1 = async () =>
+      {
+        const response = await fetch(`${process.env.REACT_APP_URL_LOCAL}/api/Assignment/FetchSubmission`, {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+              'aid':localStorage.getItem('aid')
+          })
+        });
+        const json = await response.json();
+        console.log(json);
+        setSb(json.assignment);
+        console.log(json.assignment);
+        console.log(sb);
+        //getData1();
+      }
+      getData1();
+      return () => {
+      }
+    }, [])
 
   return (
     <>
@@ -78,6 +105,40 @@ export const AssignmentOne = (props) => {
             </div>
 
         </button>
+
+        <div className={`${subm} `}>
+            <table className=" table-auto w-full mt-10">
+        <thead>
+          <tr>
+            <th className="border border-[#d5d5d5] rounded-2xl p-3">Student Name</th>
+            <th className="border border-[#d5d5d5] rounded-2xl p-3">Answers</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="border border-[#d5d5d5] rounded-2xl p-3">Nishant Badlani</td>
+            <td className="border border-[#d5d5d5] rounded-2xl p-3">
+                Tailwind CSS is a highly customizable, 
+                low-level CSS framework that gives you all 
+                of the building blocks. Tailwind CSS is a highly customizable, 
+                low-level CSS framework that gives you all 
+                of the building blocks.Tailwind CSS is a highly customizable, 
+                low-level CSS framework that gives you all 
+                of the building blocks. Tailwind CSS is a highly customizable, 
+                low-level CSS framework that gives you all 
+                of the building blocks.
+            </td> </tr>
+            {sb.map((ad) => ( 
+                  <>
+                    <SingleSubmission key={ad._id} ad={ad}/>
+                  </>
+                ))}
+         
+          
+        </tbody>
+        </table>
+            </div>
+
     </div>
 </div>
 

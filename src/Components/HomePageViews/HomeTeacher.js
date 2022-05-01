@@ -14,7 +14,7 @@ function HomeTeacher() {
               <ul className="m-2">
                 <li className="my-6">
                   <NavLink
-                    to={""}
+                    to={"/Assignment"}
                     className="hover:text-Primary-color transition ease-in-out duration-400"
                   >
                     
@@ -29,7 +29,7 @@ function HomeTeacher() {
                 </li>
               </ul>
               <NavLink
-                    to={""}
+                    to={"/Assignment"}
                     className="hover:text-Primary-color transition ease-in-out duration-400"
                   >
                     <button className=" text-Primary-color transition ease-in-out duration-400 px-7 py-4 h-auto w-auto  cursor-pointer font-semibold mr-3"> See More </button>
@@ -47,7 +47,7 @@ function HomeTeacher() {
               <ul className="m-2">
                 <li className="my-6">
                   <NavLink
-                    to={""}
+                    to={"/Quizz"}
                     className="hover:text-Primary-color transition ease-in-out duration-400"
                   >
                 
@@ -61,7 +61,7 @@ function HomeTeacher() {
                 </li>
               </ul>
               <NavLink
-                    to={""}
+                    to={"/Quizz"}
                     className="hover:text-Primary-color transition ease-in-out duration-400"
                   >
                     {" "}
