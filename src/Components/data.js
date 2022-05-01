@@ -4,12 +4,8 @@ const questions = [
       title: 'Do I have to allow the use of cookies?',
       info:
         'Unicorn vinyl poutine brooklyn, next level direct trade iceland. Shaman copper mug church-key coloring book, whatever poutine normcore fixie cred kickstarter post-ironic street art.',
-<<<<<<< HEAD
         url: 'https://www.youtube.com/embed/p0Q8SQSCoZg'
     },
-=======
-      },
->>>>>>> ce320338394707e45460f78536005e69804c1219
     {
       id: 2,
       title: 'How do I change my My Page password?',
