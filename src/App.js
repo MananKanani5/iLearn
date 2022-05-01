@@ -22,6 +22,7 @@ import Logout from "./Components/Logout";
 import Gal from "./routes/Gal";
 import NoticeCreate from "./routes/NoticeCreate";
 import SelectSubject from "./routes/SelectSubject";
+import AssignmentStu from "./routes/AssignmentStu";
 
 // lazy loading components, routes import
 // const Navbar = React.lazy(() => import('./Components/Navbar'));
@@ -52,6 +53,7 @@ const updateStatus = () => {
           <Route path="/NoticeCreate" element={<NoticeCreate />} />
           <Route path="/Quizz" element={<Quizz />} />
           <Route path="/SelectSubject" element={<SelectSubject />} />
+          <Route path="/AssignmentStu" element={<AssignmentStu />} />
           <Route path="/CreateQuiz" element={<CreateQuiz />} />
           <Route path="/LecStruct" element={<LecStruct />} />
           <Route path='/AdminCreate' element={<AdminCreate/>} />
