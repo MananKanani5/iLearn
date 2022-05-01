@@ -14,10 +14,11 @@ class Assignment extends React.Component {
 
   componentDidMount = async () =>
   {
-    const response = await fetch("http://localhost:5000/api/Assignment/FetchSpecific", {
+    const response = await fetch(`${process.env.REACT_APP_URL_LOCAL}/api/Assignment/FetchSpecific`, {
         method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify({
           "tn":localStorage.getItem('name')
@@ -38,10 +39,11 @@ class Assignment extends React.Component {
 
   componentDidUpdate = async () =>
   {
-    const response = await fetch("http://localhost:5000/api/Assignment/FetchSpecific", {
+    const response = await fetch(`${process.env.REACT_APP_URL_LOCAL}/api/Assignment/FetchSpecific`, {
         method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify({
           "tn":localStorage.getItem('name')
@@ -93,7 +95,7 @@ class Assignment extends React.Component {
       e.preventDefault();
       console.log("Registration Submit Clicked");
       const response = await fetch(
-        "http://localhost:5000/api/Assignment/Create",
+        `${process.env.REACT_APP_URL_LOCAL}/api/Assignment/Create`,
         {
           method: "POST",
           headers: {

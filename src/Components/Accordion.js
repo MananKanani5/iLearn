@@ -1,9 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import data from './data'
+import data2 from './data2'
 import SingleQuestion from './Question'
 
 const Accordion = (props) => {
-  const [questions, setQuestions] = useState(data)
+  const [questions, setQuestions] = useState([])
+  useEffect(() => {
+    if(localStorage.getItem('sub')=='data')
+  {
+    setQuestions(data);
+  }
+  else if(localStorage.getItem('sub')=='data2')
+  {
+    setQuestions(data2);
+  }
+  else {}
+    
+  });
   const changeUri = (url) =>
   {
     props.changeUrl(url);

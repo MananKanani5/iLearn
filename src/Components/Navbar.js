@@ -59,7 +59,7 @@ const Navbar = (props) => {
           {  
           props.status=='true' &&
           <div className="navigation relative inline-block">
-            <NavLink to={"/Login"} className="block profile bg-Primary-color hover:bg-hover-primary transition ease-in-out duration-400 px-6 py-4 h-auto w-auto rounded-full hover:shadow-lg cursor-pointer">
+            <NavLink to={""} className="block profile bg-Primary-color hover:bg-hover-primary transition ease-in-out duration-400 px-6 py-4 h-auto w-auto rounded-full hover:shadow-lg cursor-pointer">
               <i className="fa fa-user-alt flex items-center"> 
                 <span className="font-sans font-semibold ml-2 max-sm:hidden"> {props.name} </span>
                 <i className="fa fa-angle-down ml-2"></i>
@@ -73,6 +73,7 @@ const Navbar = (props) => {
           </div> }
 
         </div>
+        
         <div className="sm-options bg-hover-secondary">
           <div className={`py-5 px-2 options md:hidden ${menu}  flex flex-col justify-center items-center  space-y-4`}>
             {renderSwitch(localStorage.getItem('role'))}

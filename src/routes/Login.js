@@ -49,7 +49,7 @@ const Login = (props) => {
       
       console.log("Submit Clicked")
       //TODO API  http://localhost:5000
-      const response = await fetch(`${process.env.REACT_APP_URL}/api/${edp}/Login`,{
+      const response = await fetch(`${process.env.REACT_APP_URL_LOCAL}/api/${edp}/Login`,{
         method:"POST",
         headers:{
           'Content-Type': 'application/json',
@@ -68,6 +68,7 @@ const Login = (props) => {
         localStorage.removeItem('name');
         localStorage.setItem('role',json.role);
         localStorage.setItem('name',json.name);
+        localStorage.setItem('Uid',json.uid);
         localStorage.setItem('status','true');
         props.updateName();
         props.updateStatus();

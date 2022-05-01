@@ -7,7 +7,7 @@ class Loader extends React.Component {
   state = {
     loading: true
   };
-
+  
   componentDidMount() {
     // this simulates an async action, after which the component will render the content
     demoAsyncCall().then(() => this.setState({ loading: false }));

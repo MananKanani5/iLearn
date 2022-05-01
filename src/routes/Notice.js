@@ -10,10 +10,11 @@ export class Notice extends Component {
 
   componentDidMount=async()=>
   {
-    const response = await fetch("http://localhost:5000/api/Notice/Fetch", {
+    const response = await fetch(`${process.env.REACT_APP_URL_LOCAL}/api/Notice/Fetch`, {
         method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify({
         })

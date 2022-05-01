@@ -48,14 +48,14 @@ class Home extends React.Component {
 
         { localStorage.getItem('role')=='teacher' &&
           <section className="bg-white">
-          <h1 className="text-center"> Teachers View</h1>
+          
           {<HomeTeacher />}
         </section>
         }
 
         { localStorage.getItem('role')=='student' &&
           <section className="bg-white ">
-          <h1 className="text-center"> Student View</h1>
+          
           {<HomeStudent />}
           
         </section>

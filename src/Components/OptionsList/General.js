@@ -16,7 +16,9 @@ export const General = () => {
     <NavLink  style={({ isActive }) => ({
         color: isActive ? '#f36730' : '',
       })} to={"/Contactus"} className="hover:text-Primary-color transition ease-in-out duration-400 font-semibold">Contact Us</NavLink>
-
+<NavLink  style={({ isActive }) => ({
+        color: isActive ? '#f36730' : '',
+      })} to={"/Login"} className="hover:text-Primary-color transition ease-in-out duration-400 font-semibold">Login</NavLink>
   </>
   )
 }

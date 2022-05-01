@@ -1,9 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-
-
-
-const AssignmentSmall = (props) => {
+const AssignmentSmall2 = (props) => {
     var ad=props.ad
   return (
     <>
@@ -11,7 +8,7 @@ const AssignmentSmall = (props) => {
     <button onClick={() => {localStorage.removeItem('aid');
     localStorage.setItem('aid',ad.Assignment_Id);}} title={ad.Assignment_Id}>
                       <NavLink
-                        to={"/AssignmentDetails"}
+                        to={"/AssignmentStu"}
                         className="hover:text-Primary-color transition ease-in-out duration-400" 
                       >
                         
@@ -25,8 +22,9 @@ const AssignmentSmall = (props) => {
                         <p>End Date: {ad.Submission_Date.toString().slice(0,10)}</p>
                         <p>Marks: {ad.Assignment_Marks}</p>
                       </div>
-                    </li></>
+                    </li>
+    </>
   )
 }
 
-export default AssignmentSmall
+export default AssignmentSmall2

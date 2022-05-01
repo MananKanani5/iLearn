@@ -2,9 +2,19 @@ import React, {useState, useEffect} from "react";
 import Accordion from "../Components/Accordion";
 
 function LecStruct() {
-
-  const [video, setVideo] = useState("https://www.youtube.com/embed/E2t5XbWwj7I")
-
+//https://www.youtube.com/embed/E2t5XbWwj7I
+  
+  const [video, setVideo] = useState("")
+  // if(localStorage.getItem('sub')=='data')
+  // {
+  //   setVideo("https://www.youtube.com/embed/E2t5XbWwj7I");
+  // }
+  // else if(localStorage.getItem('sub')=='data2')
+  // {
+  //   setVideo("https://www.youtube.com/embed/PoBePPh5Iko");
+  // }
+  // else {}
+ 
   useEffect(() => {
     setVideo(video)
   }, [video]);

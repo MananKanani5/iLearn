@@ -46,10 +46,11 @@ class StudentCreate extends React.Component {
     const handleSubmit = async (e) => {
       e.preventDefault();
       console.log("Registration Submit Clicked");
-      const response = await fetch("http://localhost:5000/api/Student/Register", {
+      const response = await fetch(`${process.env.REACT_APP_URL_LOCAL}/api/Student/Register`, {
         method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify({
           "Fname": firstName,

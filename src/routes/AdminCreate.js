@@ -50,10 +50,11 @@ class AdminCreate extends React.Component {
 
       
       console.log("Registration Submit Clicked");
-      const response = await fetch("http://localhost:5000/api/Admin/Register", {
+      const response = await fetch(`${process.env.REACT_APP_URL_LOCAL}/api/Admin/Register`, {
         method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify({
           "Fname": firstName,
