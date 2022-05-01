@@ -98,43 +98,9 @@ h3{
     opacity: 1;
   }
 }
-
-.pulsate-bck {
-	-webkit-animation: pulsate-bck 1.5s ease-in-out infinite both;
-	        animation: pulsate-bck 1.5s ease-in-out infinite both;
+.pulsate-bck{
+ transition: 0.3s ease-in-out;
 }
-
-
-/**
- * ----------------------------------------
- * animation pulsate-bck
- * ----------------------------------------
- */
- @-webkit-keyframes pulsate-bck {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-@keyframes pulsate-bck {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
+.pulsate-bck:hover {
+    transform: scale(1.02);
 }
