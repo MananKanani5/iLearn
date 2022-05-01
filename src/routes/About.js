@@ -15,13 +15,13 @@ const about = () => {
           </div>
         </section>
         
-        <section className='bg-[#fff7f2] px-8 max-sm:px-5 py-24  m-z fade-in flex items-center justify-between' >
+        <section className='bg-[#fff7f2] px-8 max-sm:px-5 py-24  m-z fade-in flex items-center justify-between max-sm:flex-col' >
           <div>
-            <img src={clg} className='pr-24' />
+            <img src={clg} className='sm:pr-24 max-sm:mb-10' />
           </div>
-          <div className='w-[70%] text-justify'>
-            <h2 className='uppercase mb-5'> Welcome to Learners College</h2>
-            <p>
+          <div className='sm:w-[70%] '>
+            <h2 className='uppercase mb-5 max-sm:text-center'> Welcome to Learners College</h2>
+            <p className='text-justify'>
             Learners College of Arts and Commerce is affiliated to University of Mumbai, it is one of the best colleges in the Mumbai suburbs. It is managed by Kandivali Education Society. Various Degree, Diploma and Under Graduate Programmes conducted are of Arts, Commerce, Management and Science. Degree programmes such as BCOM. BA, BAF, BBI, BFM, BMS, BMM, BScIT, BIM, BATM, BEM, BTM, BCOM (International Accounting), BCOM (Fintech),  B.Sc. (Data Science). Junior College Programmes such as HSC Arts and Commerce. Post Graduate Programmes such as MCom (Accountancy) and MCom (Management), M.A.(Business Economics), M.Sc.IT, M.Sc. (Data Science), M.Sc. (Finance), MATM, MA (Communication and Journalism), MA( Applied Geography), MA (Hindi). Our promise is to bring the best educational facilities to our students by maintaining a sharp focus on the pursuit of knowledge and skills.
             </p>
           </div>
