@@ -24,6 +24,7 @@ const AssignmentDetails = () => {
     }, [])
     return (
         // teachers View
+    
         <>
             {data.map((ad) => ( 
                   <>
