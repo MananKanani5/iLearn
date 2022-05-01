@@ -3,11 +3,11 @@ import Accordion from "../Components/Accordion";
 
 function LecStruct() {
 
-  const [video, setVideo] = useState("https://www.youtube.com/embed/L4_jarMnB0c")
+  const [video, setVideo] = useState("https://www.youtube.com/embed/E2t5XbWwj7I")
 
   useEffect(() => {
     setVideo(video)
-  }, [5]);
+  }, [video]);
   const changeUrl = (url) =>{
     setVideo(url);
     console.log("Url log at Lect: "+url);

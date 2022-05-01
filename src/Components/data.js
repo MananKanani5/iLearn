@@ -1,38 +1,38 @@
 const questions = [
     {
       id: 1,
-      title: 'Do I have to allow the use of cookies?',
+      title: 'Unit I',
       info:
-        'Unicorn vinyl poutine brooklyn, next level direct trade iceland. Shaman copper mug church-key coloring book, whatever poutine normcore fixie cred kickstarter post-ironic street art.',
-        url: 'https://www.youtube.com/embed/p0Q8SQSCoZg'
+        "Basics of Software Testing: Humans, Errors & Testing, Correctness Vs Reliability, Testing & Debugging, Principles of Testing, Test Metrics Testing in the Software Life Cycle & Test Levels: The General V-Model, WModel, Component Test, Integration Test, System Test, Acceptance Test, Generic types of Testing-Functional, Non Functional, Testing software structure, Regression Testing",
+        url: 'https://www.youtube.com/embed/E2t5XbWwj7I'
     },
     {
       id: 2,
-      title: 'How do I change my My Page password?',
+      title: 'Unit II',
       info:
-        'Coloring book forage photo booth gentrify lumbersexual. Migas chillwave poutine synth shoreditch, enamel pin thundercats fashion axe roof party polaroid chartreuse.',
-        url: 'https://www.youtube.com/embed/YmkKCdCDpwM'
+        'Static Testing: Reviews, Static Analysis -Control Flow Analysis & Data Flow Analysis, Tools for Static Testing. Dynamic Analysis: Black Box Testing- Equivalence Class Partitioning, Boundary Value Analysis, State Transition Test, Cause Effect Graphing and Decision Table Technique, User Documentation Testing, Domain: Testing, White Box-Statement Coverage, Branch Coverage, Test of Conditions, Path Coverage ',
+        url: 'https://www.youtube.com/embed/10GMNDOjpYU'
     },
     {
       id: 3,
-      title: 'What is BankID?',
+      title: 'Unit III',
       info:
-        'Enamel pin fam sustainable woke whatever venmo. Authentic asymmetrical put a bird on it, lumbersexual activated charcoal kinfolk banjo cred pickled sartorial.',
-        url: 'https://www.youtube.com/embed/YmkKCdCDpwM'
+        'Test Management: Test Planning, Test Management, Test Process, Test Reporting, Incident Management – Test Log, Incident Reporting, Classification, Status',
+        url: 'https://www.youtube.com/embed/UeMBhDwmOrE'
     },
     {
       id: 4,
-      title: 'Whose birth number can I use?',
+      title: 'Unit IV',
       info:
-        'Edison bulb direct trade gentrify beard lo-fi seitan sustainable roof party franzen occupy squid. Knausgaard cronut succulents, scenester readymade shabby chic lyft. Copper mug meh vegan gentrify.',
-        url: 'https://www.youtube.com/embed/aUunolbb1xU'
+        'Test Automation: Design and Architecture for Automation, Test Automation Design and Architecture for Automation, Generic Requirements for test Tool/Framework, Criteria for selecting test tools, Testing of Object Oriented Systems',
+        url: 'https://www.youtube.com/embed/jlbH9Wm0Z9U'
     },
     {
       id: 5,
-      title: 'When do I recieve a password ordered by letter?',
+      title: 'Unit V',
       info:
-        'Locavore franzen fashion axe live-edge neutra irony synth af tilde shabby chic man braid chillwave waistcoat copper mug messenger bag. Banjo snackwave blog, microdosing thundercats migas vaporware viral lo-fi seitan ',
-        url: 'https://www.youtube.com/embed/aUunolbb1xU'
+        'Selenium-Introduction, Environment Setup, Selenese Commands, WebDriver, Locators, User Interactions, TestNG, Grid ',
+        url: 'https://www.youtube.com/embed/wJUQ45dGkS8'
     },
   ]
   export default questions

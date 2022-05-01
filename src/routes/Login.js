@@ -71,7 +71,7 @@ const Login = (props) => {
         localStorage.setItem('status','true');
         props.updateName();
         props.updateStatus();
-        navigate('/About')
+        navigate('/')
       }
       else{
         console.log('You are not in: '+json.error);
