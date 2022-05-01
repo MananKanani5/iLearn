@@ -1,8 +1,30 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import { NoticeSmall } from "./NoticeSmall";
 
 
 export class Notice extends Component {
+  state={
+    data:[]
+  };
+
+  componentDidMount=async()=>
+  {
+    const response = await fetch("http://localhost:5000/api/Notice/Fetch", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+        })
+      });
+      const json = await response.json();
+      console.log(json);
+      this.setState({
+        data:json.notice
+      })
+      console.log(this.state.data);
+  }
   render() {
     return (
       <>
@@ -13,12 +35,11 @@ export class Notice extends Component {
             </h1>
             <div className="list mt-5 ">
               <ul className="m-2">
-                <li className="my-6">                    
-                    <h3 className="hover:text-Primary-color transition ease-in-out duration-400 mb-5">1. Notice One - Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, nisi! Asperiores dolor, enim optio magni, quo et labore illum esse quia explicabo laboriosam iusto assumenda dolorem . </h3>
-
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam in quidem quos odio, quasi eligendi tempore dolor non error quia sint beatae labore, saepe sed possimus suscipit? Aspernatur, beatae unde obcaecati laudantium magnam vitae odio, labore non animi iusto deserunt ducimus. Natus eveniet laborum mollitia minima, veritatis et nesciunt porro!</p>
-                </li>
-                <hr />
+                {this.state.data.reverse().map((ad) => ( 
+                  <>
+                    <NoticeSmall key={ad._id} ad={ad}/>
+                  </>
+                ))}
               </ul>
             </div>
           </div>

@@ -124,14 +124,9 @@ class Assignment extends React.Component {
       }
     };
     return (
-<<<<<<< HEAD
-      <section className="px-8 max-sm:px-5 py-12  bg-[#fff7f2] m-z fade-in flex justify-between flex-wrap">
-        <div className="sm:w-3/5 max-sm:mb-10">
-=======
-      <section className="px-8 max-sm:px-5 py-12 bg-[#fff7f2] m-z fade-in flex justify-between flex-wrap">
+       <section className="px-8 max-sm:px-5 py-12 bg-[#fff7f2] m-z fade-in flex justify-between flex-wrap">
         <div className='sm:w-3/5 max-sm:mb-10'>
 
->>>>>>> 87e1d03341968a49f59efce1b93cfffeb625e299
           <div className="bg-white shadow-md rounded-2xl px-8 max-sm:px-5 py-7 mb-4 sm:max-w-[95%]">
             <h1 className="text-2xl font-bold uppercase text-center mb-14 mt-2 leading-normal">
               Assignments

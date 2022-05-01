@@ -101,7 +101,7 @@ const Login = (props) => {
                 className="block text-gray-700 text-sm font-bold mb-2"
                 htmlFor="username"
               >
-                Username
+                Uid
               </label>
               <input
                 className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
@@ -109,7 +109,7 @@ const Login = (props) => {
                 onChange={setUn}
                 value={username}
                 type="text"
-                placeholder="Username"
+                placeholder="Uid"
                 name="username"
                 autoComplete="username"
                 pattern='^(STU|ADM|TCH)\d{4}$'
