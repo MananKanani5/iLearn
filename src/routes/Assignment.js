@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom';
+import assignmentData from './assignmentData';
 class Assignment extends React.Component {
   state = {
     title: "",
@@ -9,13 +10,20 @@ class Assignment extends React.Component {
     attachment: ""
   };
 
-  setValue = (fieldName) => (evt) =>
+  setMin = ()=>
+  {
+    document.getElementById('subdate').min = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0];
+    console.log(new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0]);
+  }
+
+  setValue = (fieldName) => (evt) => {
     this.setState({ [fieldName]: evt.target.value });
+  }
 
   render() {
 
     const { title, description, marks, subdate, attachment } = this.state;
-
+    
     const handleSubmit = async (e) => {
       e.preventDefault();
       console.log("Registration Submit Clicked");
@@ -55,45 +63,20 @@ class Assignment extends React.Component {
 
             <div className='list mt-5 '>
               <ul className='m-2'>
-                <li className='my-6'>
-                  <NavLink to={"/AssignmentDetails"} className="hover:text-Primary-color transition ease-in-out duration-400"> <h3>1. Assignment One - Lorem ipsum sit... </h3></NavLink>
+              {assignmentData.map((ad) => (
+              <>
+              <li className='my-6'>
+                  <NavLink to={"/AssignmentDetails"} className="hover:text-Primary-color transition ease-in-out duration-400"> <h3>{ad.no}. {ad.title}</h3></NavLink>
                   <div className='meta text-gray-500 sm:pl-4 max-sm:pt-2 flex flex-wrap'>
-                    <p>Class: TY-BSCIT</p>
-                    <p>Created On: 07-03-2022</p>
-                    <p>End Date: 07-03-2022</p>
-                    <p>Marks: 15</p>
+                    <p>Class: {ad.Class}</p>
+                    <p>Created On: {ad.created}</p>
+                    <p>End Date: {ad.end}</p>
+                    <p>Marks: {ad.marks}</p>
                   </div>
                 </li>
-                <hr />
-                <li className='my-6'>
-                  <NavLink to={""} className="hover:text-Primary-color transition ease-in-out duration-400"> <h3>2. Assignment Two - Lorem ipsum sit... </h3></NavLink>
-                  <div className='meta text-gray-500 sm:pl-4 max-sm:pt-2 flex flex-wrap '>
-                    <p>Class: TY-BSCIT</p>
-                    <p>Created On: 07-03-2022</p>
-                    <p>End Date: 07-03-2022</p>
-                    <p>Marks: 15</p>
-                  </div>
-                </li>
-                <hr />
-                <li className='my-6'>
-                  <NavLink to={""} className="hover:text-Primary-color transition ease-in-out duration-400"> <h3>3. Assignment Three - Lorem ipsum sit... </h3></NavLink>
-                  <div className='meta text-gray-500 sm:pl-4 max-sm:pt-2 flex flex-wrap '>
-                    <p>Class: TY-BSCIT</p>
-                    <p>Created On: 07-03-2022</p>
-                    <p>End Date: 07-03-2022</p>
-                    <p>Marks: 15</p>
-                  </div>
-                </li>
-                <hr />
-                <li className='my-6'>
-                  <NavLink to={""} className="hover:text-Primary-color transition ease-in-out duration-400"> <h3>4. Assignment Four - Lorem ipsum sit... </h3></NavLink>
-                  <div className='meta text-gray-500 sm:pl-4 max-sm:pt-2 flex flex-wrap '>
-                    <p>Class: TY-BSCIT</p>
-                    <p>Created On: 07-03-2022</p>
-                    <p>End Date: 07-03-2022</p>
-                    <p>Marks: 15</p>
-                  </div>
-                </li>
+              </>
+               ))}
+                
               </ul>
             </div>
 
@@ -162,13 +145,14 @@ class Assignment extends React.Component {
                 <input
                   className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
                   id="subdate"
+                  onClick={this.setMin}
                   onChange={this.setValue("subdate")}
                   value={subdate}
                   type="date" placeholder="Submission Date" rows={8}
                 />
               </div>
 
-              <div className="m-4">
+              {/* <div className="m-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
                   htmlFor="Address">
@@ -184,9 +168,9 @@ class Assignment extends React.Component {
                   <input type='file' className='cursor-pointer'
                     onChange={this.setValue("attachment")}
                     value={attachment} multiple />
-                    </div>
+                  </div>
                 </label>
-              </div>
+              </div> */}
               <div className="m-4">
                 <button
                   className="bg-Primary-color hover:bg-hover-primary transition ease-in-out duration-400 px-6 py-3 h-auto w-auto rounded-full cursor-pointer hover:shadow-lg text-white font-semibold"
@@ -203,7 +187,9 @@ class Assignment extends React.Component {
         </div>
       </section>
     );
+   
   }
+  
 }
 
 export default Assignment;

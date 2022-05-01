@@ -1,12 +1,16 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Accordion from "../Components/Accordion";
 
 function LecStruct() {
 
-  const [first, setfirst] = useState("https://www.youtube.com/embed/L4_jarMnB0c")
+  const [video, setVideo] = useState("https://www.youtube.com/embed/E2t5XbWwj7I")
 
-  const change = () =>{
-    setfirst("https://www.youtube.com/embed/p0Q8SQSCoZg")
+  useEffect(() => {
+    setVideo(video)
+  }, [video]);
+  const changeUrl = (url) =>{
+    setVideo(url);
+    console.log("Url log at Lect: "+url);
   }
 
   return (
@@ -18,9 +22,9 @@ function LecStruct() {
             <iframe
               width="100%"
               height="400"
-              src={`${first}`}
+              src={`${video}`}
               title="Main Lecture Video"
-              frameborder="0"
+              frameBorder="0"
               allowFullScreen="allowFullScreen"
               className='rounded-2xl max-sm:h-[180px]'
             ></iframe>
@@ -33,8 +37,7 @@ function LecStruct() {
 
         <div className="sm:w-2/5 w-full">
           <div className="bg-white shadow-md rounded-2xl px-8 max-sm:px-5 py-7">
-          <button onClick={change}> Hello  </button>  
-           {<Accordion />}
+           {<Accordion changeUrl={changeUrl}/>}
           </div>
         </div>
       </section>
