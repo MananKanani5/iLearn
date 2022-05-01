@@ -45,8 +45,12 @@ const Navbar = (props) => {
               <i className={` ${menu === 'hidden' ? 'hidden' : 'block'} fa fa-solid fa-close text-2xl h-4 w-4`}></i>
             </button>
           </div>
-
-          <div className="md-options w-full hidden md:flex flex-row space-x-7">
+          {/* <footer className={`${
+          props.theme === "black" ? "text-slate-50" : "text-slate-900"
+        } body-font ${
+          props.theme === "black" ? "bg-slate-900" : "bg-slate-50"
+        } body-font xl:h-350`}> */}
+          <div className={`md-options w-full hidden md:flex flex-row space-x-7 ${props.status=='true'?'':'justify-end'}`}>
             {renderSwitch(localStorage.getItem('role'))}
           </div>
           {
