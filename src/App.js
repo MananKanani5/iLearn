@@ -19,6 +19,8 @@ import LecStruct from "./routes/LecStruct";
 import CreateQuiz from "./routes/Quiz/CreateQuiz";
 import ForgetPass from "./routes/ForgetPass";
 import Logout from "./Components/Logout";
+import Gal from "./routes/Gal";
+import NoticeCreate from "./routes/NoticeCreate";
 
 // lazy loading components, routes import
 // const Navbar = React.lazy(() => import('./Components/Navbar'));
@@ -42,9 +44,11 @@ const updateStatus = () => {
         <Routes>
           <Route path='/'  element={<Home />} />
           <Route path='/About' element={<About />} />
+          <Route path='/Gallery' element={<Gal />} />
           <Route path='/Assignment' element={<Assignment />} exact />
           <Route path='/AssignmentDetails' element={<AssignmentDetails />} />
           <Route path="/Notice" element={<Notice  />} />
+          <Route path="/NoticeCreate" element={<NoticeCreate />} />
           <Route path="/Quizz" element={<Quizz />} />
           <Route path="/CreateQuiz" element={<CreateQuiz />} />
           <Route path="/LecStruct" element={<LecStruct />} />

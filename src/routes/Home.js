@@ -44,6 +44,7 @@ class Home extends React.Component {
         <section className="bg-white ">
           <h1 className="text-center"> Student View</h1>
           {<HomeStudent />}
+          
         </section>
 
         </>
