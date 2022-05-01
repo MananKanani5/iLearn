@@ -88,7 +88,7 @@ const ForgetPass = (props) => {
       console.log(edp)
 
     e.preventDefault();
-    const response = await fetch(`http://localhost:5000/api/${edp}/getemail`, {
+    const response = await fetch(`${process.env.REACT_APP_URL_LOCAL}/api/${edp}/getemail`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -141,7 +141,7 @@ const ForgetPass = (props) => {
       console.log("Submit 2 clickec");
       //TODO API
       const response = await fetch(
-        `http://localhost:5000/api/${edp}/updatepass`,
+        `${process.env.REACT_APP_URL_LOCAL}/api/${edp}/updatepass`,
         {
           method: "PUT",
           headers: {

@@ -58,7 +58,7 @@ const Navbar = (props) => {
           }
           {  
           props.status=='true' &&
-          <div className="navigation relative inline-block">
+          <div className="navigation relative inline-block max-sm:ml-[20px]">
             <NavLink to={""} className="block profile bg-Primary-color hover:bg-hover-primary transition ease-in-out duration-400 px-6 py-4 h-auto w-auto rounded-full hover:shadow-lg cursor-pointer">
               <i className="fa fa-user-alt flex items-center"> 
                 <span className="font-sans font-semibold ml-2 max-sm:hidden"> {props.name} </span>
@@ -66,7 +66,7 @@ const Navbar = (props) => {
                 </i> 
             </NavLink>
             <div className="navigation-content shadow-lg border rounded-md absolute right-3 hidden z-10 min-w-[160px] bg-white">
-              <NavLink to={"/Dashboard"} className="block p-3 hover:bg-slate-100 font-semibold text-black hover:text-hover-primary hover:rounded-md">Dashboard</NavLink>
+              {/* <NavLink to={"/Dashboard"} className="block p-3 hover:bg-slate-100 font-semibold text-black hover:text-hover-primary hover:rounded-md">Dashboard</NavLink> */}
               
               <NavLink to={"/Logout"} className="block p-3 hover:bg-slate-100 font-semibold text-black hover:text-hover-primary hover:rounded-md">Logout</NavLink>
             </div>
