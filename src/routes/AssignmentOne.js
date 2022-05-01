@@ -115,7 +115,7 @@ export const AssignmentOne = (props) => {
           </tr>
         </thead>
         <tbody>
-          <tr>
+          {/* <tr>
             <td className="border border-[#d5d5d5] rounded-2xl p-3">Nishant Badlani</td>
             <td className="border border-[#d5d5d5] rounded-2xl p-3">
                 Tailwind CSS is a highly customizable, 
@@ -127,7 +127,7 @@ export const AssignmentOne = (props) => {
                 of the building blocks. Tailwind CSS is a highly customizable, 
                 low-level CSS framework that gives you all 
                 of the building blocks.
-            </td> </tr>
+            </td> </tr> */}
             {sb.map((ad) => ( 
                   <>
                     <SingleSubmission key={ad._id} ad={ad}/>
