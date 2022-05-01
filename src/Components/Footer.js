@@ -6,7 +6,7 @@ function Footer() {
   return (
     <>
         <div className="bg-Secondary-color text-white bottom-0 w-full  ">
-            <div className='flex justify-between pt-6 pb-6 items-center pl-5 pr-5 flex-wrap max-sm:justify-center'>
+            <div className='flex justify-between py-6 items-center px-5 flex-wrap max-sm:justify-center'>
               <div className='text-center m-2'>
                 <p> © 2022 Copyright Learners College. </p>
               </div>

@@ -31,20 +31,21 @@ const Navbar = (props) => {
   return (
     <>
       <div className="bg-Secondary-color text-white top-0 w-full sticky z-10">
-        <div className="flex justify-evenly  items-center py-2 px-5 max-sm:pl-3 max-sm:pr-3">
-          <div className="hambuger block md:hidden">
-            <button onClick={showMenu} className=" ml-2">
+        <div className="flex justify-evenly  items-center py-3 mx-5">
+          <div className="logo flex-col justify-center items-center mr-10">
+            <div className="clogo ">
+              <NavLink to="/"><img src={logo} className="w-[400px] " alt="KES Logo" loading="eager" /></NavLink>
+            </div>
+          </div>
+
+          <div className="hambuger block md:hidden ">
+            <button onClick={showMenu} className="">
               <i className={` ${menu === 'hidden' ? 'block' : 'hidden'} fa fa-solid fa-bars text-2xl h-4 w-4`}></i>
 
               <i className={` ${menu === 'hidden' ? 'hidden' : 'block'} fa fa-solid fa-close text-2xl h-4 w-4`}></i>
             </button>
           </div>
-          <div className="logo flex-col justify-center items-center mr-14">
 
-            <div className="clogo ">
-              <NavLink to="/"><img src={logo} className="w-[400px]" alt="KES Logo" loading="eager" /></NavLink>
-            </div>
-          </div>
           <div className="md-options w-full hidden md:flex flex-row space-x-7">
             {renderSwitch(localStorage.getItem('role'))}
           </div>

@@ -103,7 +103,7 @@ function HomeStudent() {
                     to={""}
                     className="hover:text-Primary-color transition ease-in-out duration-400"
                   >
-                    {" "}
+                    
                     <h3>1. Quiz 1 - iLearn </h3>
                   </NavLink>
                   <div className="meta text-gray-500 sm:pl-4 max-sm:pt-2 flex flex-wrap ">
@@ -117,10 +117,10 @@ function HomeStudent() {
                 to={""}
                 className="hover:text-Primary-color transition ease-in-out duration-400"
               >
-                {" "}
+                
                 <button className=" text-Primary-color transition ease-in-out duration-400 px-7 py-4 h-auto w-auto  cursor-pointer font-semibold mr-3">
-                  {" "}
-                  See More{" "}
+                 
+                  See More
                 </button>
               </NavLink>
             </div>
