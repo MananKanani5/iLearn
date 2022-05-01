@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import HomeStudent from "../Components/HomePageViews/HomeStudent";
+import HomeTeacher from "../Components/HomePageViews/HomeTeacher";
 import bg from '../img/home/bg.png';
 
 
@@ -34,16 +36,16 @@ class Home extends React.Component {
           </div>
         </section>
 
-        {/* <section className="bg-white about py-24 px-10 flex justify-between items-center max-sm:flex-wrap max-sm:flex-col-reverse max-sm:px-5 max-sm:py-14 fade-in ">
-          <div className="info flex-1 mr-5 max-sm:flex max-sm:flex-wrap max-sm:justify-center">
-            <h3 className="text-right max-sm:text-[18px]">About Us</h3>
-            <h1 className="font-bold mb-5 text-Secondary-color uppercase text-right max-sm:text-center max-sm:text-[28px]">A little More About Us</h1>
-            <p className="mb-12 text-right max-sm:text-center max-sm:mb-10 sm:pl-24">Learners College of Arts and Commerce is affiliated to University of Mumbai. It is managed by Kandivali Education Society. Various Degree, Diploma and Under Graduate Programmes conducted are of Arts, Commerce, Management and Science. Our promise is to bring the best educational facilities to our students by maintaining a sharp focus on the pursuit of knowledge and skills.</p>
-          </div>
-          <div className="img w-2/4 max-sm:w-full max-sm:mb-10 sm:pl-5">
-            <img src={logo_black} alt="bg" loading="lazy" />
-          </div>
-        </section> */}
+        <section className="bg-white ">
+          <h1 className="text-center"> Teachers View</h1>
+          {<HomeTeacher />}
+        </section>
+
+        <section className="bg-white ">
+          <h1 className="text-center"> Student View</h1>
+          {<HomeStudent />}
+        </section>
+
         </>
     );
   }
