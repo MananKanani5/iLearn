@@ -18,10 +18,9 @@ function HomeTeacher() {
                     className="hover:text-Primary-color transition ease-in-out duration-400"
                   >
                     
-                    <h3>1. Assignment Three - Lorem ipsum sit... </h3>
+                    <h3>1. Assignment Three - </h3>
                   </NavLink>
                   <div className="meta text-gray-500 sm:pl-4 max-sm:pt-2 flex flex-wrap ">
-                    <p>Class: TY-BSCIT</p>
                     <p>Created On: 07-03-2022</p>
                     <p>End Date: 07-03-2022</p>
                     <p>Marks: 15</p>

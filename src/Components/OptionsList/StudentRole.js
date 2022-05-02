@@ -19,6 +19,9 @@ const StudentRole = () => {
       <NavLink  style={({ isActive }) => ({
           color: isActive ? '#f36730' : '',
         })} to={"/Notice"} className="hover:text-Primary-color transition ease-in-out duration-400 font-semibold">Notice</NavLink>
+        <NavLink style={({ isActive }) => ({
+        color: isActive ? '#f36730' : '',
+      })} to="/SelectSubject" className=" hover:text-Primary-color transition ease-in-out duration-400 font-semibold"> Lecture Structutre</NavLink>
       {/* <NavLink  style={({ isActive }) => ({
           color: isActive ? '#f36730' : '',
         })} to={""} className="hover:text-Primary-color transition ease-in-out duration-400 font-semibold">Files</NavLink>
